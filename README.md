@@ -26,7 +26,7 @@ MySQL Port 오픈 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/982f75b6-895f-4ee2-94c4-0cbb76c8f0f4)
 
 3. OCI MDS replication 설정   
-* GTID가 설정이 안된 Mariadb 이관시에는 아래(3.1 ~ 3.5)와 같이 오류가 발생하기 때문에 중간 단계에 MySQL 
+* Mariadb 데이터 이관시에는 아래(3.1 ~ 3.5)와 같이 오류가 발생하기 때문에 중간 단계에 MySQL 
 replication 서버 1대가 더 필요함.    
 (MDS는 현재 시점 기준 gtid_mode를 ON_PERMISSIVE로 변경 할 수가 없음)
 > 3.1 MDS channel replication 설정
