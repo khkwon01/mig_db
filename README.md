@@ -44,6 +44,6 @@ replication 서버 1대가 더 필요함.
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/67344261-6e19-4f6e-b8c7-daaf99e5246d)    
 MariaDB : binlog position   
 MySQL 5.7 : binlog position (log-bin.000001/154)    
-아래와 같이 MySQL 5.7 또는 8.0를 설정후 start (8.0 파라미터는 틀릴수 있음)
+아래와 같이 MySQL 5.7 또는 8.0를 설정후 start (8.0 파라미터는 틀릴수 있음)     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/11ad1207-b335-4e10-bbca-458d27224627)    
 MDS 8.0.33 : GTID 
