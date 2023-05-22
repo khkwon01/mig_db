@@ -53,7 +53,7 @@ Naver Cloud 서버에서 제공하는 MySQL 5.7 또는 8.0를 설정후 start (8
 * MDS channel replication 상태
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/d792fde6-5966-4ffe-8b39-b96542e87d6e)     
 3.9 데이터 변경 테스트
-* MariaDB에서 데이터 변경
+* MariaDB에서 데이터 변경     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/7f31e90c-e05f-4d33-ae72-20cad00e309b)
 *
 
