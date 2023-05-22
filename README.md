@@ -43,8 +43,10 @@ replication 서버 1대가 더 필요함.
 * GTID를 사용하든 안하든 Mariadb는 MySQL과 replication 구조가 틀리기 때문에 아래와 같이 변경하여 구성     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/67344261-6e19-4f6e-b8c7-daaf99e5246d)   
 
-3.6 MariaDB : binlog position (default 설정)   
-3.7 MySQL 5.7 : binlog position (log-bin.000001/154)    
+3.6 MariaDB 
+- binlog position (default 설정)   
+3.7 MySQL 5.7 
+- binlog position (log-bin.000001/154)    
 Naver Cloud 서버에서 제공하는 MySQL 5.7 또는 8.0를 설정후 start (8.0 파라미터는 틀릴수 있음)     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/11ad1207-b335-4e10-bbca-458d27224627)    
 3.8 MDS 8.0.33 : GTID (default 설정)
