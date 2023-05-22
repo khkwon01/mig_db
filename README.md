@@ -55,6 +55,10 @@ Naver Cloud 서버에서 제공하는 MySQL 5.7 또는 8.0를 설정후 start (8
 3.9 데이터 변경 테스트
 * MariaDB에서 데이터 변경     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/7f31e90c-e05f-4d33-ae72-20cad00e309b)
-*
+* MySQL 5.7 (intermediate stage)
+![image](https://github.com/khkwon01/mig_db/assets/8789421/514d4eed-78be-4b74-9277-c69a43e184c2)     
+* MDS 8.0.33 (final db)
+![image](https://github.com/khkwon01/mig_db/assets/8789421/eeac30ae-b9fd-410c-9e44-195bd6b8997f)
+
 
 
