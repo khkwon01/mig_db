@@ -9,3 +9,7 @@ migration test for several dbs
 
 * 2) 네이버 slave status 결과
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/364201c4-da1a-4262-ae3e-e129f74ae4e3)
+
+* 3) 
+*![image](https://github.com/khkwon01/mig_db/assets/8789421/fa72b375-2a2c-4ac2-867f-2974670dc143)
+
