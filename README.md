@@ -30,3 +30,8 @@ MySQL Port 오픈 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/bb8ea940-ff1a-4359-8170-dec601b65713)   
 2) 설정후 연결 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/53fb6783-3ea1-4d43-b94f-caceca095db0)
+3) MDS replication 상태 확인
+![image](https://github.com/khkwon01/mig_db/assets/8789421/22e3fbd1-1dfc-4dc6-91f0-54257c8f703f)
+4) Naver VM MySQL내 replica 연결 상태
+![image](https://github.com/khkwon01/mig_db/assets/8789421/17ee2034-652a-4ce9-a429-f383db238b36)
+
