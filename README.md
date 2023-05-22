@@ -26,14 +26,14 @@ MySQL Port 오픈 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/982f75b6-895f-4ee2-94c4-0cbb76c8f0f4)
 
 3. OCI MDS replication 설정   
-1) MDS channel replication 설정
+3.1 MDS channel replication 설정
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/bb8ea940-ff1a-4359-8170-dec601b65713)   
-2) 설정후 연결 상태 확인
+3.2 설정후 연결 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/53fb6783-3ea1-4d43-b94f-caceca095db0)
-3) MDS replication 상태 확인
+3.3 MDS replication 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/22e3fbd1-1dfc-4dc6-91f0-54257c8f703f)
-4) Naver VM MySQL내 replica 연결 상태
+3.4 Naver VM MySQL내 replica 연결 상태
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/17ee2034-652a-4ce9-a429-f383db238b36)
-5) Source(Master)에서 데이터 변경시 오류발생    
+3.5 Source(Master)에서 데이터 변경시 오류발생    
 'Worker 1 failed executing transaction 'NOT_YET_DETERMINED' at source log mariadb-bin.000004, end_log_pos 473; Error '@@SESSION.GTID_NEXT cannot be set to ANONYMOUS when @@GLOBAL.GTID_MODE = ON.' on query. Default database: 'test'. Query: 'create database test''    
 
