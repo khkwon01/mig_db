@@ -40,5 +40,5 @@ replication 서버 1대가 더 필요함.
 > 3.5 Source(Master)에서 데이터 변경시 Slave(Replica)에서 오류발생    
 'Worker 1 failed executing transaction 'NOT_YET_DETERMINED' at source log mariadb-bin.000004, end_log_pos 473; Error '@@SESSION.GTID_NEXT cannot be set to ANONYMOUS when @@GLOBAL.GTID_MODE = ON.' on query. Default database: 'test'. Query: 'create database test''    
     
-* GTID를 사용하지 않는 Mariadb 같은 경우 아래와 같이 변경하여 구성
+* GTID를 사용하지 않는 Mariadb 같은 경우 아래와 같이 변경하여 구성     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/67344261-6e19-4f6e-b8c7-daaf99e5246d)
