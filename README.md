@@ -16,7 +16,7 @@ db간 replication 연결
 5. OCI MDS에서 데이터 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/c1f53a8a-5cef-4202-bd0f-379549109297)
    
-### 2. Migration test from Naver Server to OCI MDS
+### 2. Migration test from Naver Server (MariaDB 10.2.11) to OCI MDS
 1. Naver 서버(vm) 설정
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/f47aaef2-6d8f-43b0-bf85-a063572a446a)
     
@@ -34,4 +34,6 @@ MySQL Port 오픈 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/22e3fbd1-1dfc-4dc6-91f0-54257c8f703f)
 4) Naver VM MySQL내 replica 연결 상태
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/17ee2034-652a-4ce9-a429-f383db238b36)
+5) Source(Master)에서 데이터 변경시 오류발생    
+'Worker 1 failed executing transaction 'NOT_YET_DETERMINED' at source log mariadb-bin.000004, end_log_pos 473; Error '@@SESSION.GTID_NEXT cannot be set to ANONYMOUS when @@GLOBAL.GTID_MODE = ON.' on query. Default database: 'test'. Query: 'create database test''    
 
