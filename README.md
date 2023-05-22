@@ -26,7 +26,8 @@ MySQL Port 오픈 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/982f75b6-895f-4ee2-94c4-0cbb76c8f0f4)
 
 3. OCI MDS replication 설정   
-3.1 MDS channel replication 설정
+<sapn style="color:red">test</span>
+5.1 MDS channel replication 설정
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/bb8ea940-ff1a-4359-8170-dec601b65713)   
 3.2 설정후 연결 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/53fb6783-3ea1-4d43-b94f-caceca095db0)
