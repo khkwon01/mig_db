@@ -17,6 +17,8 @@ db간 replication 연결
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/c1f53a8a-5cef-4202-bd0f-379549109297)
    
 ### 2. Migration test from Naver Server to OCI MDS
-1. Naver 서버 설정
+1. Naver 서버(vm) 설정
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/f47aaef2-6d8f-43b0-bf85-a063572a446a)
-
+    
+Naver VM내 MySQL 확인
+![image](https://github.com/khkwon01/mig_db/assets/8789421/b207a0f2-0138-4679-8115-ede2e7fdf16a)
