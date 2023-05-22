@@ -41,4 +41,9 @@ replication 서버 1대가 더 필요함.
 'Worker 1 failed executing transaction 'NOT_YET_DETERMINED' at source log mariadb-bin.000004, end_log_pos 473; Error '@@SESSION.GTID_NEXT cannot be set to ANONYMOUS when @@GLOBAL.GTID_MODE = ON.' on query. Default database: 'test'. Query: 'create database test''    
     
 * GTID를 사용하지 않는 Mariadb 같은 경우 아래와 같이 변경하여 구성     
-![image](https://github.com/khkwon01/mig_db/assets/8789421/67344261-6e19-4f6e-b8c7-daaf99e5246d)
+![image](https://github.com/khkwon01/mig_db/assets/8789421/67344261-6e19-4f6e-b8c7-daaf99e5246d)    
+MariaDB : binlog position   
+MySQL 5.7 : binlog position (log-bin.000001/154)    
+아래와 같이 MySQL 5.7 또는 8.0를 설정후 start (8.0 파라미터는 틀릴수 있음)
+![image](https://github.com/khkwon01/mig_db/assets/8789421/11ad1207-b335-4e10-bbca-458d27224627)
+MDS 8.0.33 : GTID 
