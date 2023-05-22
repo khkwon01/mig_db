@@ -1,7 +1,7 @@
 # mig_db
 migration test for several dbs
-
-## 1. Migration test from Naver MySQL to OCI MDS.
+## 1. Naver Cloud
+### 1. Migration test from Naver MySQL to OCI MDS.
 1. db간 replication 연결 
 네이버 MySQL(8.0.25)에 replictaion을 연결하여 MDS(8.0.33)로 데이터 동기화   
 (=> 네이버 MySQL 5.7.29 버전에 대해서도 동작 하는 걸 확인함)
