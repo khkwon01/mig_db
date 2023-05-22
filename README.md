@@ -47,8 +47,9 @@ replication 서버 1대가 더 필요함.
 - binlog position (default 설정)   
      
 3.7 MySQL 5.7 
-- binlog position (log-bin.000001/154)    
-Naver Cloud 서버에서 제공하는 MySQL 5.7 또는 8.0를 설정후 start (8.0 파라미터는 틀릴수 있음)     
+- binlog position (log-bin.000001/154)      
+Naver Cloud for MySQL 서비스는 gtid_on=ON_PERMISSIVE 파라미터 설정을 할 수 없어 VM상에 MySQL 구성이 필요함   
+Naver Cloud 서버에서 제공하는 vm상에 MySQL 5.7 또는 8.0를 구성 후 아래와 같이 파라미터 설정 후 start (8.0 파라미터는 틀릴수 있음)   
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/11ad1207-b335-4e10-bbca-458d27224627)    
      
 3.8 MDS 8.0.33 : GTID (default 설정)
