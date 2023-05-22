@@ -15,4 +15,8 @@ migration test for several dbs
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/1e02e262-c335-466a-aed0-809e312c5287)
 * 5) OCI MDS에서 데이터 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/c1f53a8a-5cef-4202-bd0f-379549109297)
+   
+### 2. Migration test from Naver Server to OCI MDS
+1. Naver 서버 설정
+![image](https://github.com/khkwon01/mig_db/assets/8789421/f47aaef2-6d8f-43b0-bf85-a063572a446a)
 
