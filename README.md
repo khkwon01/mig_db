@@ -34,6 +34,6 @@ MySQL Port 오픈 상태 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/22e3fbd1-1dfc-4dc6-91f0-54257c8f703f)
 3.4 Naver VM MySQL내 replica 연결 상태
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/17ee2034-652a-4ce9-a429-f383db238b36)
-3.5 Source(Master)에서 데이터 변경시 오류발생    
+3.5 Source(Master)에서 데이터 변경시 Slave(Replica)에서 오류발생    
 'Worker 1 failed executing transaction 'NOT_YET_DETERMINED' at source log mariadb-bin.000004, end_log_pos 473; Error '@@SESSION.GTID_NEXT cannot be set to ANONYMOUS when @@GLOBAL.GTID_MODE = ON.' on query. Default database: 'test'. Query: 'create database test''    
 
