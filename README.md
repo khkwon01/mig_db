@@ -1,6 +1,7 @@
 # mig_db
 migration test for several dbs
-## 1. Naver Cloud
+## 1. Naver Cloud     
+네이버 클라우드에서 사용 가능한 MySQL 서비스는 Cloud for MySQL과 vm상에 MySQL 2가지 있는데, 각각 항목에 대해서 테스트진행     
 ### 1. Migration test from Naver MySQL to OCI MDS.   
 db간 replication 연결 
 네이버 MySQL(8.0.25)에 replictaion을 연결하여 MDS(8.0.33)로 데이터 동기화   
