@@ -20,5 +20,5 @@ db간 replication 연결
 1. Naver 서버(vm) 설정
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/f47aaef2-6d8f-43b0-bf85-a063572a446a)
     
-Naver VM내 MySQL 확인
+2. Naver VM내 MySQL 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/b207a0f2-0138-4679-8115-ede2e7fdf16a)
