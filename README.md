@@ -45,10 +45,12 @@ replication 서버 1대가 더 필요함.
 
 3.6 MariaDB : binlog position (default 설정)   
 3.7 MySQL 5.7 : binlog position (log-bin.000001/154)    
-아래와 같이 MySQL 5.7 또는 8.0를 설정후 start (8.0 파라미터는 틀릴수 있음)     
+Naver Cloud 서버에서 제공하는 MySQL 5.7 또는 8.0를 설정후 start (8.0 파라미터는 틀릴수 있음)     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/11ad1207-b335-4e10-bbca-458d27224627)    
 3.8 MDS 8.0.33 : GTID (default 설정)
+* MDS channel replication 설정     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/b3adaa65-5193-4af6-af7e-2be6ed7dbc17)
+* 
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/d792fde6-5966-4ffe-8b39-b96542e87d6e)
 
 
