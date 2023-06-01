@@ -1,6 +1,6 @@
 # mig_db
 migration test for several dbs    
-(MariaDB 이관방법 : https://blogs.oracle.com/mysql/post/how-to-migrate-from-mariadb-to-mysql-heatwave)     
+(MariaDB을 Heatwave로 이관방법 : https://blogs.oracle.com/mysql/post/how-to-migrate-from-mariadb-to-mysql-heatwave)     
 
 ## 1. Naver Cloud     
 네이버 클라우드에서 사용 가능한 MySQL 서비스는 Cloud for MySQL과 vm상에 MySQL 2가지 있는데, 각각 항목에 대해서 테스트진행     
