@@ -2,9 +2,9 @@
 migration test for several dbs    
 (MariaDB을 Heatwave로 이관방법 : https://blogs.oracle.com/mysql/post/how-to-migrate-from-mariadb-to-mysql-heatwave)     
 
-## 1. Naver Cloud     
+### 1. Naver Cloud     
 네이버 클라우드에서 사용 가능한 MySQL 서비스는 Cloud for MySQL과 vm상에 MySQL 2가지 있는데, 각각 항목에 대해서 테스트진행     
-### 1. Migration test from Naver MySQL to OCI MDS.   
+#### 1. Migration test from Naver MySQL to OCI MDS.   
 db간 replication 연결 
 네이버 MySQL(8.0.25)에 replictaion을 연결하여 MDS(8.0.33)로 데이터 동기화   
 (=> 네이버 MySQL 5.7.29 버전에 대해서도 동작 하는 걸 확인함)
@@ -19,7 +19,7 @@ db간 replication 연결
 5. OCI MDS에서 데이터 확인
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/c1f53a8a-5cef-4202-bd0f-379549109297)
    
-### 2. Migration test from Naver Server (MariaDB 10.2.11) to OCI MDS
+#### 2. Migration test from Naver Server (MariaDB 10.2.11) to OCI MDS
 1. Naver 서버(vm) 설정
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/f47aaef2-6d8f-43b0-bf85-a063572a446a)
     
