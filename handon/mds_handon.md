@@ -11,6 +11,11 @@ Source(MySQL 5.7)를 제외하고는 아래 Delpoy를 아이콘을 클릭하여 
 ## 1) VM 구성    
 Name과 Oracle Linux8 os, operator-subnet-regional subnet등을 선택하여 설치
 
+기본적으로 firewall은 disable 시켜야 함.    
+```
+systemctl stop firewalld.service 
+systemctl disable firewalld.service 
+```
 ## 2) MySQL 5.7 Download    
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.42-linux-glibc2.12-x86_64.tar
 
