@@ -46,7 +46,7 @@ printf "[mysqld]\ngtid_mode=on\nenforce-gtid-consistency\nlog-bin=/usr/local/mys
 // 샘플 데이터 다운로드
 wget https://downloads.mysql.com/docs/world-db.zip
 
-// 데이터 import
+// 샘플 데이터 import
 mysql -u root -p < world.sql
 
 // 테스트 계정 생성
@@ -58,3 +58,13 @@ mysql> create user repl@'%' identified by "Welcome#1";
 mysql> grant replication slave on *.* to repl@'%';
 ```
 # 3. Target 구성 (MDS, HeatWave)
+## 1) 초기 데이터 적재
+```
+// 샘플 데이터 import
+mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
+```
+## 2) channel - 공통
+### A. Source connection
+![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
+
+
