@@ -63,8 +63,13 @@ mysql> grant replication slave on *.* to repl@'%';
 // 샘플 데이터 import
 mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
 ```
-## 2) channel - 공통
-### A. Source connection
+## 2) channel - replication    
+### A. Source connection (공통)   
+아래 항목은 channel 구성(전체, 스키마, db, table등)시 기본 공통적으로 설정을 해야 하는 부분임.     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
+
+### B. Target DB system - 전체
+![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
+
 
 
