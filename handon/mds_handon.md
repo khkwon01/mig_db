@@ -99,7 +99,7 @@ Source와 Target db간 schema 기준 데이터가 동일해야 함
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/71d2b80e-00ee-4c54-9f12-36f1af10c572)    
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/39b25f43-11c2-414d-85f6-d623372a4c45)
 
-- replication 완료후 상태
+- replication 완료후 상태    
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/4be4d667-9691-4fdc-afc3-5b92db953051)
 
 - replication 테스트
@@ -116,5 +116,25 @@ Source와 Target db간 테이블 기준 데이터가 동일해야 함
 - replication 구성
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/42bc905a-d2ea-42f0-8764-9c7300a716db)
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/38e0b923-6041-4167-836a-cb826ef01ab1)
+
+- replication 완료후 상태
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/f2c0c80d-4efb-4c96-88a8-de5017dddb5c)
+
+- replication 테스트
+  ```
+  use world;
+  insert into t1 values (4, 'nm4'), (5, 'nm5'), (6, 'nm6');
+  update t1 set nm = 'changenm5' where id = 5;
+  create table t2 (id int primary key, nm varchar(10));
+  insert into t2 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
+  ```
+  <img width="755" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/2b5e9a1b-6016-49f7-bf31-5f16ccca09ea">
+  - 추가 테스트    
+    - 1개 정책에 여러개 table 이름 패턴 추가 - 지원안됨 
+      ![image](https://github.com/khkwon01/mig_db/assets/8789421/55a77317-f7d3-4ad0-bad3-9b978f5936f8)
+    - 여러개 정책에 table 이름 패턴 추가 - 지원 
+      ![image](https://github.com/khkwon01/mig_db/assets/8789421/9184ac5e-32b2-48f3-8c25-db35a59ea972)
+
+
 
 
