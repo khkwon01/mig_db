@@ -93,7 +93,7 @@ Source와 Target db간 전체 데이터가 동일해야 함
   ```
    <img width="823" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/33e3b891-87c6-4e26-a2ea-c3a921f16ee8">
    
-### C. Target DB system - schema   
+### C. Target DB system - db   
 Source와 Target db간 schema 기준 데이터가 동일해야 함
 - replication 구성
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/71d2b80e-00ee-4c54-9f12-36f1af10c572)    
@@ -136,6 +136,9 @@ Source와 Target db간 테이블 기준 데이터가 동일해야 함
     - 여러개 정책에 table 이름 패턴 추가 - 지원     
       ![image](https://github.com/khkwon01/mig_db/assets/8789421/9184ac5e-32b2-48f3-8c25-db35a59ea972)    
 
+### E. Target DB system - rewrite-db 
+Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
+- replication 구성
 
 
 
