@@ -5,7 +5,7 @@ Source(MySQL 5.7)를 제외하고는 아래 Delpoy를 아이콘을 클릭하여 
 
 ![Alt text](image.png)
 
-# 2. Source 구성   
+# 2. Source 구성 (MySQL 5.7)  
 위에 그림에서 MySQL 5.7에 해당 하는 부분은 직접 VM 인스턴스를 생성하여 MySQL 설치하여 구성함
 
 ## 1) VM 구성    
@@ -57,5 +57,4 @@ mysql> grant all privileges on world.* to svctest@'%';
 mysql> create user repl@'%' identified by "Welcome#1";
 mysql> grant replication slave on *.* to repl@'%';
 ```
-
-# 3. Target 구성
+# 3. Target 구성 (MDS, HeatWave)
