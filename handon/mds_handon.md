@@ -16,8 +16,25 @@ wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.42-linux-glibc2.12-
 
 ## 3) MySQL Shell 설치   
 yum install -y mysql-shell  
+yum install -y ncurses-compat-libs
 
 ## 4) MySQL 5.7 설치
+```
+tar -xvf mysql-5.7.42-linux-glibc2.12-x86_64.tar.gz
+mv mysql-5.7.42-linux-glibc2.12-x86_64 /usr/local/mysql
 
-
+groupadd mysql
+useradd -r -g mysql -s /bin/false mysql
+cd /usr/local/mysql
+mkdir mysql-files
+chown mysql:mysql mysql-files
+chmod 750 mysql-files
+bin/mysqld --initialize --user=mysql
+bin/mysql_ssl_rsa_setup
+bin/mysqld_safe --user=mysql &
+echo "export PATH=$PATH:/usr/local/mysql/bin" >> /root/.bash_profile
+. ~/.bash_profile
+set password=password('Welcome#1');
+cp support-files/mysql.server /etc/init.d/mysql.server
+```
 # 3. Target 구성
