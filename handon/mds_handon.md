@@ -74,6 +74,7 @@ mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
 
 ### B. Target DB system - 전체
+Source와 Target db간 전체 데이터가 동일해야 함
 - replication 구성 
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
 
@@ -92,5 +93,28 @@ mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
   ```
    <img width="823" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/33e3b891-87c6-4e26-a2ea-c3a921f16ee8">
    
-### C. Target DB system - user
+### C. Target DB system - schema   
+Source와 Target db간 schema 기준 데이터가 동일해야 함
+- replication 구성
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/71d2b80e-00ee-4c54-9f12-36f1af10c572)    
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/39b25f43-11c2-414d-85f6-d623372a4c45)
+
+- replication 완료후 상태
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/4be4d667-9691-4fdc-afc3-5b92db953051)
+
+- replication 테스트
+  ```
+  use world;
+  create table t1 (id int primary key, nm varchar(10));
+  insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
+  update t1 set nm = 'changenm2' where id = 2;
+  ```
+  <img width="751" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/df635af9-3b62-4615-998c-ce49c0c6d4cf">
+
+### D. Target DB system - table-*    
+Source와 Target db간 테이블 기준 데이터가 동일해야 함    
+- replication 구성
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/42bc905a-d2ea-42f0-8764-9c7300a716db)
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/38e0b923-6041-4167-836a-cb826ef01ab1)
+
 
