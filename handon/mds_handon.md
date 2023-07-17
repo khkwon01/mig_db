@@ -41,4 +41,21 @@ cp support-files/mysql.server /etc/init.d/mysql.server
 printf "[mysqld]\ngtid_mode=on\nenforce-gtid-consistency\nlog-bin=/usr/local/mysql/data/logbin\nserver_id=0720\n" >> /etc/my.cnf
 /etc/init.d/mysql.server restart
 ```
+## 5) Test 계정 생성 및 데이터 import
+```
+// 샘플 데이터 다운로드
+wget https://downloads.mysql.com/docs/world-db.zip
+
+// 데이터 import
+mysql -u root -p < world.sql
+
+// 테스트 계정 생성
+mysql> create user svctest@'%' identified by "Welcome#1";
+mysql> grant all privileges on world.* to svctest@'%';
+
+// replication 계정 생성
+mysql> create user repl@'%' identified by "Welcome#1";
+mysql> grant replication slave on *.* to repl@'%';
+```
+
 # 3. Target 구성
