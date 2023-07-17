@@ -150,7 +150,7 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
   use world;
   update city set name='Kabul_change' where id = 1;    
   ```
-  <img width="889" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/dd92f28f-e7a6-45b2-8d79-5c07c136586a">
+  <img width="889" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/dd92f28f-e7a6-45b2-8d79-5c07c136586a">    
   ```
   create table t1 (id int primary key, nm varchar(10));
   insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');    
