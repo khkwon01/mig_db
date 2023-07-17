@@ -74,7 +74,8 @@ mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
 
 ### B. Target DB system - 전체
-Source와 Target db간 전체 데이터가 동일해야 함
+Source와 Target db간 전체 데이터가 동일해야 함   
+(channel filter 참고 자료 : https://docs.oracle.com/en-us/iaas/mysql-database/doc/creating-replication-channel.html#GUID-DF828619-669E-41CC-8BE5-F7A136AFF470)    
 - replication 구성 
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
 
@@ -139,6 +140,22 @@ Source와 Target db간 테이블 기준 데이터가 동일해야 함
 ### E. Target DB system - rewrite-db 
 Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
 - replication 구성
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/6e921f2d-c319-46ad-a848-7a03b0bda25a)
+
+- replication 완료후 상태
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/4c7c9f10-b624-499a-ad6b-3ad83a0daede)
+
+- replication 테스트
+  ```
+  use world;
+  update city set name='Kabul_change' where id = 1;
+  ```
+  <img width="889" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/dd92f28f-e7a6-45b2-8d79-5c07c136586a">
+  ```
+  create table t1 (id int primary key, nm varchar(10));
+  insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');  
+  ```
+  <img width="863" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/48d22449-b07b-4b12-92ad-41d766a07184">
 
 
 
