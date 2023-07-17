@@ -82,7 +82,7 @@ Source와 Target db간 전체 데이터가 동일해야 함
 - replication 완료후 상태  
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/22f85991-de63-4ed1-a108-a76659978f38)
 
-- replication 테스트
+- replication 테스트     
   ```
   // source에서 아래와 같이 수행하면 target에서 생성
   create database test1;
@@ -103,7 +103,7 @@ Source와 Target db간 schema 기준 데이터가 동일해야 함
 - replication 완료후 상태    
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/4be4d667-9691-4fdc-afc3-5b92db953051)
 
-- replication 테스트
+- replication 테스트    
   ```
   use world;
   create table t1 (id int primary key, nm varchar(10));
@@ -130,7 +130,7 @@ Source와 Target db간 테이블 기준 데이터가 동일해야 함
   create table t2 (id int primary key, nm varchar(10));
   insert into t2 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
   ```
-  - Target 조회 결과
+  - Target 조회 결과     
     <img width="755" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/2b5e9a1b-6016-49f7-bf31-5f16ccca09ea">
   
   - 추가 테스트    
@@ -147,14 +147,14 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
 - replication 완료후 상태      
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/4c7c9f10-b624-499a-ad6b-3ad83a0daede)
 
-- replication 테스트
+- replication 테스트    
   ```
   use world;
   update city set name='Kabul_change' where id = 1;    
   create table t1 (id int primary key, nm varchar(10));
   insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');    
   ```
-  - Target 조회 결과
+  - Target 조회 결과     
     <img width="889" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/dd92f28f-e7a6-45b2-8d79-5c07c136586a"> 
     <img width="863" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/48d22449-b07b-4b12-92ad-41d766a07184">
 
