@@ -129,11 +129,12 @@ Source와 Target db간 테이블 기준 데이터가 동일해야 함
   insert into t2 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
   ```
   <img width="755" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/2b5e9a1b-6016-49f7-bf31-5f16ccca09ea">
+  
   - 추가 테스트    
-    - 1개 정책에 여러개 table 이름 패턴 추가 - 지원안됨 
-      ![image](https://github.com/khkwon01/mig_db/assets/8789421/55a77317-f7d3-4ad0-bad3-9b978f5936f8)
-    - 여러개 정책에 table 이름 패턴 추가 - 지원 
-      ![image](https://github.com/khkwon01/mig_db/assets/8789421/9184ac5e-32b2-48f3-8c25-db35a59ea972)
+    - 1개 정책에 여러개 table 이름 패턴 추가 - 지원안됨     
+      ![image](https://github.com/khkwon01/mig_db/assets/8789421/55a77317-f7d3-4ad0-bad3-9b978f5936f8)     
+    - 여러개 정책에 table 이름 패턴 추가 - 지원     
+      ![image](https://github.com/khkwon01/mig_db/assets/8789421/9184ac5e-32b2-48f3-8c25-db35a59ea972)    
 
 
 
