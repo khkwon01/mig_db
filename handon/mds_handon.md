@@ -79,7 +79,7 @@ Source와 Target db간 전체 데이터가 동일해야 함
 - replication 구성 
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
 
-- replication 완료후 상태  
+- replication 완료후 상태   
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/22f85991-de63-4ed1-a108-a76659978f38)
 
 - replication 테스트     
@@ -92,7 +92,8 @@ Source와 Target db간 전체 데이터가 동일해야 함
 
   // target에서 아래 명령어를 수행하면 복제된 걸 확인 가능
   ```
-   <img width="823" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/33e3b891-87c6-4e26-a2ea-c3a921f16ee8">
+  - Target 조회 결과    
+    <img width="823" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/33e3b891-87c6-4e26-a2ea-c3a921f16ee8">
    
 ### C. Target DB system - db   
 Source와 Target db간 schema 기준 데이터가 동일해야 함
@@ -110,7 +111,7 @@ Source와 Target db간 schema 기준 데이터가 동일해야 함
   insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
   update t1 set nm = 'changenm2' where id = 2;
   ```
-  - Target 조회 결과
+  - Target 조회 결과    
     <img width="751" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/df635af9-3b62-4615-998c-ce49c0c6d4cf">
 
 ### D. Target DB system - table-*    
@@ -119,7 +120,7 @@ Source와 Target db간 테이블 기준 데이터가 동일해야 함
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/42bc905a-d2ea-42f0-8764-9c7300a716db)
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/38e0b923-6041-4167-836a-cb826ef01ab1)
 
-- replication 완료후 상태
+- replication 완료후 상태    
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/f2c0c80d-4efb-4c96-88a8-de5017dddb5c)
 
 - replication 테스트
