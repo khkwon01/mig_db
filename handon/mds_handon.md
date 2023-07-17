@@ -68,28 +68,29 @@ mysql> grant replication slave on *.* to repl@'%';
 // 샘플 데이터 import
 mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
 ```
-## 2) channel - replication    
+## 2) channel - replication ( 메뉴 Databases > DB systems > channels ) 
 ### A. Source connection (공통)   
 아래 항목은 channel 구성(전체, 스키마, db, table등)시 기본 공통적으로 설정을 해야 하는 부분임.     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
 
 ### B. Target DB system - 전체
-- replication 구성
-![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
+- replication 구성 
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
 
-- replication 완료후 상태     
-![image](https://github.com/khkwon01/mig_db/assets/8789421/bd7f11c3-9c1b-4692-a0f3-10767b6ddec7)
+- replication 완료후 상태  
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/22f85991-de63-4ed1-a108-a76659978f38)
 
 - replication 테스트
-```
-// source에서 아래와 같이 수행하면 target에서 생성
-create database test1;
-user test1;
-create table t1 (id int primary key, nm varchar(10));
-insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
+  ```
+  // source에서 아래와 같이 수행하면 target에서 생성
+  create database test1;
+  user test1;
+  create table t1 (id int primary key, nm varchar(10));
+  insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
 
-// target에서 아래 명령어를 수행하면 복제된 걸 확인 가능    
-<img width="823" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/33e3b891-87c6-4e26-a2ea-c3a921f16ee8">
-
-```
+  // target에서 아래 명령어를 수행하면 복제된 걸 확인 가능
+  ```
+   <img width="823" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/33e3b891-87c6-4e26-a2ea-c3a921f16ee8">
+   
+### C. Target DB system - user
 
