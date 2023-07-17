@@ -142,7 +142,7 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
 - replication 구성
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/6e921f2d-c319-46ad-a848-7a03b0bda25a)
 
-- replication 완료후 상태
+- replication 완료후 상태      
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/4c7c9f10-b624-499a-ad6b-3ad83a0daede)
 
 - replication 테스트
