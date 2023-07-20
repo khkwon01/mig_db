@@ -24,6 +24,7 @@ yum install -y ncurses-compat-libs
 
 ## 4) MySQL 5.7 설치
 ```
+tar -xvf mysql-5.7.42-linux-glibc2.12-x86_64.tar
 tar -xvf mysql-5.7.42-linux-glibc2.12-x86_64.tar.gz
 mv mysql-5.7.42-linux-glibc2.12-x86_64 /usr/local/mysql
 
