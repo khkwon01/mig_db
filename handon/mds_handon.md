@@ -87,7 +87,7 @@ Source와 Target db간 전체 데이터가 동일해야 함
     ```
     // source에서 아래와 같이 수행하면 target에서 생성
     create database test1;
-    user test1;
+    use test1;
     create table t1 (id int primary key, nm varchar(10));
     insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
   
