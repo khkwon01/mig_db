@@ -19,8 +19,7 @@ systemctl disable firewalld.service
 ## 2) MySQL 5.7 Download    
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.42-linux-glibc2.12-x86_64.tar
 
-## 3) MySQL Shell 설치   
-yum install -y mysql-shell  
+## 3) MySQL 추가 패키지 설치   
 yum install -y ncurses-compat-libs
 
 ## 4) MySQL 5.7 설치
