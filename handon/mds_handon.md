@@ -37,9 +37,9 @@ chmod 750 mysql-files
 bin/mysqld --initialize --user=mysql
 bin/mysql_ssl_rsa_setup
 bin/mysqld_safe --user=mysql &
-// 가동 후 임시 패스워드 변경  set password = password('Welcome#1')
 echo "export PATH=$PATH:/usr/local/mysql/bin" >> /root/.bash_profile
 . ~/.bash_profile
+// 가동 후 임시 패스워드 변경  set password = password('Welcome#1')
 set password=password('Welcome#1');
 cp support-files/mysql.server /etc/init.d/mysql.server
 
