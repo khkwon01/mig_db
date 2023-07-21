@@ -120,7 +120,8 @@ Source와 Target db간 schema 기준 데이터가 동일해야 함
 Source와 Target db간 테이블 기준 데이터가 동일해야 함    
 - replication 구성
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/42bc905a-d2ea-42f0-8764-9c7300a716db)
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/38e0b923-6041-4167-836a-cb826ef01ab1)
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/d866119c-357f-47de-8e42-aaaf37dd07fe)
+
 
 - replication 완료후 상태    
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/f2c0c80d-4efb-4c96-88a8-de5017dddb5c)
