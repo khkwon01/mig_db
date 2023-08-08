@@ -187,3 +187,16 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
     SELECT * FROM performance_schema.replication_applier_status_by_worker\G
     SELECT * FROM performance_schema.error_log;
     ```    
+## 4) channel 강제로 연결 (소스단에 binlog가 없어졌을 경우)
+### A. 소스 DB에서 현 시점 최종 gtid 확인
+    select @@gtid_executed, @@gtid_purged\G    
+    예제로 아래와 같이 내용이 출력된다면,  아래 내용중  165bb3ee-3585-11ee-901d-02001701d33a:1-6 를 복사하고    
+    *************************** 1. row ***************************    
+    @@gtid_executed: 165bb3ee-3585-11ee-901d-02001701d33a:1-6   
+    @@gtid_purged: 165bb3ee-3585-11ee-901d-02001701d33a:1-5   
+
+### B. 타켓 DB에서  admin 계정으로 아래 명령어 수행    
+    위에 소스 DB에서 copy한 gtid를 넣어주고 아래 명령어 수행    
+    call sys.set_gtid_purged("165bb3ee-3585-11ee-901d-02001701d33a:1-6")     
+
+### C. channel 재연결 (resume)
