@@ -164,5 +164,26 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
     <img width="889" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/dd92f28f-e7a6-45b2-8d79-5c07c136586a"> 
     <img width="863" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/48d22449-b07b-4b12-92ad-41d766a07184">
 
-
-
+## 3) channel(replication) 로그 확인
+### A. source (db접속)
+    ```
+    SHOW GLOBAL VARIABLES;
+    SHOW GLOBAL STATUS;
+    SHOW ENGINE INNODB STATUS;
+    SHOW MASTER STATUS;
+    SHOW MASTER LOGS;
+    SELECT * FROM performance_schema.error_log;
+    ```
+### B. target (db접속)
+    ```
+    SHOW GLOBAL VARIABLES;
+    SHOW GLOBAL STATUS;
+    SHOW ENGINE INNODB STATUS;
+    SHOW REPLICA STATUS;
+    SELECT * FROM performance_schema.replication_connection_configuration\G
+    SELECT * FROM performance_schema.replication_connection_status\G
+    SELECT * FROM performance_schema.replication_applier_status\G
+    SELECT * FROM performance_schema.replication_applier_status_by_coordinator\G
+    SELECT * FROM performance_schema.replication_applier_status_by_worker\G
+    SELECT * FROM performance_schema.error_log;
+    ```    
