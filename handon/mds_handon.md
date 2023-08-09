@@ -71,7 +71,7 @@ mysql> grant replication slave on *.* to repl@'%';
 mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
 ```
     
-// 실제 데이터를 소스에서 dump해서 MDS로 옮길 경우 아래와 같은 절차로 진행 하시기 바랍니다.   
+// 실제 데이터를 소스에서 dump해서 MDS로 옮길 경우 아래와 같은 절차로 진행 하시기 바랍니다. (mysqlshell)  
 ```
 util.dumpSchemas(["test"], "/tmp/test", {ocimds: true, threads: 4});      // schema 기준 데이터 dump (GTID 포함 dump)
 
