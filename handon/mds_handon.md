@@ -70,6 +70,16 @@ mysql> grant replication slave on *.* to repl@'%';
 // 샘플 데이터 import
 mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
 ```
+    
+// 실제 데이터를 소스에서 dump해서 MDS로 옮길 경우 아래와 같은 절차로 진행 하시기 바랍니다.   
+```
+util.dumpSchemas(["test"], "/tmp/test", {ocimds: true, threads: 4});      // schema 기준 데이터 dump (GTID 포함 dump)
+
+util.loadDump("/tmp/test",{updateGtidSet:"append", ignoreVersion: true})    // 신규일 경우 : 소스에 GTID를 포함하여 타겟에 설정함
+util.loadDump("/tmp/test",{updateGtidSet:"replace", ignoreVersion: true})    // 데이터 변경일 경우 : 소스에 GTID를 포함하여 타겟에 설정함
+```
+
+
 ## 2) channel - replication ( 메뉴 Databases > DB systems > channels ) 
 ### A. Source connection (공통)   
 아래 항목은 channel 구성(전체, 스키마, db, table등)시 기본 공통적으로 설정을 해야 하는 부분임.     
