@@ -6,7 +6,7 @@ Source(MySQL 5.7)를 제외하고는 아래 Delpoy를 아이콘을 클릭하여 
 ![Alt text](image.png)
 
 # 2. Source 구성 (MySQL 5.7)  
-위에 그림에서 MySQL 5.7에 해당 하는 부분은 직접 VM 인스턴스를 생성하여 MySQL 설치하여 구성함
+위에 그림에서 MySQL 5.7에 해당 하는 부분은 직접 VM 인스턴스를 생성하여 MySQL 설치하여 구성함    
 **주의사항** 소스 DB가 MDS일 경우 아래 파라미터를 꼭 길게 설정(1일이상)해서 사용하시기 바랍니다.   
 binlog_expire_logs_seconds (default 1시간, 1시간이 지나면 binlog를 지우기 때문에 설정을 변경해서 길게 잡아야 함)    
 
