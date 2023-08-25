@@ -199,6 +199,10 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
     SELECT * FROM performance_schema.replication_applier_status_by_coordinator\G
     SELECT * FROM performance_schema.replication_applier_status_by_worker\G
     SELECT * FROM performance_schema.error_log;
+
+    # replication 지연 확인
+    select * from sys.replication_lag;
+    select * from sys.replication_status_full\G
     ```    
 ## 4) channel 강제로 연결 (소스단에 binlog가 없어졌을 경우)
 ### A. 소스 DB에서 현 시점 최종 gtid 확인
