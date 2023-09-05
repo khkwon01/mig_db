@@ -27,6 +27,6 @@
 2. target database에서 데이터 load  
    - target database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
      ```
-     util.loadDump("/tmp/airport09",{threads: 10, updateGtidSet:"append", ignoreExistingObjects: true})
+     util.loadDump("/tmp/airport09",{threads: 10, updateGtidSet:"append", ignoreExistingObjects: true, resetProgress:true, ignoreVersion:true})
      SELECT @@global.gtid_executed, @@global.gtid_purged;
      ```
