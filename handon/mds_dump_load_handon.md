@@ -9,8 +9,15 @@
    dnf -y install oraclelinux-developer-release-el8
    dnf install python36-oci-cli
    ```
-   - user 계정 홈 밑에 .oci/config 설정 구성
-   
+   - user 계정 홈 밑에 .oci/config 설정 구성 (아래 항목 설정)
+   ```
+   [DEFAULT]
+   user=ocid1.user.oc1..xxxxxx
+   fingerprint=xx:xx:xx:xx:xx
+   key_file=/root/.oci/oci_api_key.pem
+   tenancy=ocid1.tenancy.oc1..xxxxxxxx
+   region=ap-chuncheon-1
+   ```
 4. source db 및 target db 생성 : [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/khkwon01/oci-mysql-config/archive/refs/tags/mds-provision-3.7.zip)
 5. source 데이터 load
    - 2번 sample 데이터를 vm상에 다운로드  
