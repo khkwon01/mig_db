@@ -76,7 +76,6 @@ mysql -u admin -h <<mds or heatwave ip>> -p < world.sql
 util.dumpSchemas(["test"], "/tmp/test", {ocimds: true, threads: 4});      // schema 기준 데이터 dump (GTID 포함 dump)
 
 util.loadDump("/tmp/test",{updateGtidSet:"append", ignoreVersion: true})    // 신규일 경우 : 소스에 GTID를 포함하여 타겟에 설정함
-util.loadDump("/tmp/test",{updateGtidSet:"replace", ignoreVersion: true})   // 데이터 변경일 경우 : 소스에 GTID를 포함하여 타겟에 설정함(소스/타켓 8.0 기준)
 util.loadDump("/tmp/test",{ignoreVersion: true})                            // GTID 오류가 날 경우 사용, 그리고 나서  call sys.set_gtid_purged로 조정
 ```
 
