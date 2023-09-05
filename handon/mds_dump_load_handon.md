@@ -22,7 +22,8 @@
 1. source database에서 데이터 dump
    - source database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
      ```
-     util.dumpSchemas(["airportdb"], "/tmp/airport09", {ocimds: true, threads: 10, showProgress: true, compatibility: ["strip_definers", "strip_restricted_grants"]})
+     # 테이블에 pk가 없을 경우 ignore_missing_pks 또는 create_invisible_pks를 compatibility에 추가
+     util.dumpSchemas(["airportdb"], "/tmp/airport09", {ocimds: true, threads: 10, showProgress: true, compatibility: ["strip_definers", "strip_restricted_grants"]})  
      ```
 2. target database에서 데이터 load  
    - target database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
