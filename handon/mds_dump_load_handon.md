@@ -51,7 +51,7 @@
      util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10, ocimds: true})
      ```
 2. target database에서 데이터 load   
-  ** 아래 Case1 또는 Case2를 선책하여 데이터 load 진행
+  ** 아래 Case1 또는 Case2를 선책하여 데이터 load 진행 **
   - Case 1 : Cloud console에서 load 진행
     * HeatWave MySQL 서비스 생성 항목중에 advanced option를 선택(아래그림)하여 object storage 항목 설정   
       ![image](https://github.com/khkwon01/mig_db/assets/8789421/6e4fa247-19ad-4c86-9d20-67373d6d9007)
