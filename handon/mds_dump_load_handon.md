@@ -4,11 +4,13 @@
 1. install mysql shell on vm (vm is redhat series like oracle, centos etc and it have public ip)
    yum install mysql-shell
 2. sample data : [airport db](https://dev.mysql.com/doc/airportdb/en/)
-3. oracle cloud command tool 설치 (oracle linux8 기준)
+3. oracle cloud command tool 설치 (object storage 백업용, oracle linux8 기준)
    ```
    dnf -y install oraclelinux-developer-release-el8
    dnf install python36-oci-cli
    ```
+   - user 계정 홈 밑에 .oci/config 설정 구성
+   
 4. source db 및 target db 생성 : [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/khkwon01/oci-mysql-config/archive/refs/tags/mds-provision-3.7.zip)
 5. source 데이터 load
    - 2번 sample 데이터를 vm상에 다운로드  
@@ -35,3 +37,9 @@
    * *데이터 재이관시 replication 재구성 할 때 아래 명령어로 target 데이터베이스에 gtid 수정을 시도해 보고 안되면 target 데이터베이스 재생성후 replication 구성필요*    
      call sys.set_gtid_purged("+<<소스GTID>:<<GAP_NUM>>");    
      ex) call sys.set_gtid_purged("+f8c1a38e-4ba6-11ee-af6f-0200170028ab:69-111");
+### 3. object storage 기반으로 사용자 데이터 dump / load
+1. source database에서 데이터 dump
+   - source database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
+     ```
+     util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"migdata", osNamespace:"idazzjlcjqzj", threads:10, ocimds: true})
+     ```
