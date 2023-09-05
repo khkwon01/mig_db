@@ -32,4 +32,4 @@
      ```
 3. 이관후 필요하면 replication 연결 ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
    * *데이터 재이관시 replication 재구성 할 때 아래 명령어로 target 데이터베이스에 gtid 수정을 시도해 보고 안되면 target 데이터베이스 재생성후 replication 구성필요*
-     call sys.set_gtid_purged("+<<소스GTID>:<<GAP NUM>>");
+     call sys.set_gtid_purged("+<<소스GTID>:<<GAP_NUM>>");
