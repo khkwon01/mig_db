@@ -30,4 +30,5 @@
      util.loadDump("/tmp/airport09",{threads: 10, updateGtidSet:"append", ignoreExistingObjects: true, resetProgress:true, ignoreVersion:true})
      SELECT @@global.gtid_executed, @@global.gtid_purged;
      ```
+     * *데이터 재이관시 target에 대한 변경을 하지 않았을 경우에는 dump만 떠서 재이관 하고 만약 target 데이터베이스를 변경했을 경우에는 mds를 다시 생성해서 재이관이 필요*</span>
 3. 이관후 필요하면 replication 연결 ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
