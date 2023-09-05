@@ -18,7 +18,7 @@
    tenancy=ocid1.tenancy.oc1..xxxxxxxx
    region=ap-chuncheon-1
    ```
-4. source db 및 target db 생성 : [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/khkwon01/oci-mysql-config/archive/refs/tags/mds-provision-3.7.zip)
+4. source db 및 target db 생성 (click the icon -->): [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/khkwon01/oci-mysql-config/archive/refs/tags/mds-provision-3.7.zip)
 5. source 데이터 load
    - 2번 sample 데이터를 vm상에 다운로드  
    - 4번에서 생성된 source database 접속 (mysqlsh admin@<<source_ip>>, password: Welcome#1) 아래 명령어 수행하여 load
@@ -51,7 +51,7 @@
      util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10, ocimds: true})
      ```
 2. target database에서 데이터 load   
-  ** 아래 Case1 또는 Case2를 선책하여 데이터 load 진행 **
+  ~~ 아래 Case1 또는 Case2를 선책하여 데이터 load 진행 ~~
   - Case 1 : Cloud console에서 load 진행
     * HeatWave MySQL 서비스 생성 항목중에 advanced option를 선택(아래그림)하여 object storage 항목 설정   
       ![image](https://github.com/khkwon01/mig_db/assets/8789421/6e4fa247-19ad-4c86-9d20-67373d6d9007)
@@ -62,3 +62,4 @@
     ```
     util.loadDump("airport_dump", {schema: "airportdb", osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10})
     ``` 
+3. 이관후 필요하면 replication 연결 ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
