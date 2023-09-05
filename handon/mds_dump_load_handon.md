@@ -30,3 +30,4 @@
      util.loadDump("/tmp/airport09",{threads: 10, updateGtidSet:"append", ignoreExistingObjects: true, resetProgress:true, ignoreVersion:true})
      SELECT @@global.gtid_executed, @@global.gtid_purged;
      ```
+3. 이관후 필요하면 replication 연결 ([mds replication연결(
