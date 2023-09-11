@@ -3,7 +3,7 @@
 ### 1. 필요 사항
 1. install mysql shell on vm (vm is redhat series like oracle, centos etc and it have public ip)    
    yum install mysql-shell
-2. sample data : [airport db](https://dev.mysql.com/doc/airportdb/en/)
+2. sample data : [airport db](https://bit.ly/3pZ1PiW)
 3. oracle cloud command tool 설치 (object storage 백업용, oracle linux8 기준)
    ```
    dnf -y install oraclelinux-developer-release-el8
