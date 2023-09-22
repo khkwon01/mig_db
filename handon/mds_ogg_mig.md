@@ -1,4 +1,4 @@
-## This is a hand on test for migrating the data between mds services using ogg
+## This document is guide for migrating the data between mds services using ogg.
 ## 1. Golden gate architecture
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/6b0be278-0f21-4729-ba1d-0df28c9b5739)
 
