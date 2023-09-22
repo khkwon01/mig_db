@@ -1,5 +1,5 @@
 ## This document is guide for migrating the data between mds services using ogg.
-## 1. Golden gate architecture
+## 1. Golden gate architecture for MySQL HeatWave 
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/6b0be278-0f21-4729-ba1d-0df28c9b5739)
 
 ## 2. How to setup the ogg for MySQL HeatWave
