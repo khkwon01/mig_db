@@ -31,7 +31,8 @@
      util.loadDump("/home/test/airport-db <-- 환경에 따라 변경", {dryRun: false, threads: 8, resetProgress:true, ignoreVersion:true})
      ```
 6. source load된 데이터로 CRUD 테스트
-* Mysqlshell과 관련된 참조 URL : https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html
+* Mysqlshell과 관련된 참조 URL
+   - https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html
      
 ### 2. vm 기반으로 사용자 데이터 dump / load 
 1. source database에서 데이터 dump
