@@ -10,7 +10,12 @@
    dnf install python36-oci-cli
    ```
    - user 계정 홈 밑에 .oci/config 설정 구성 (아래 항목 설정)
+   아래 명령어를 사용하여 config 구성 (mysqlshell로 object storage로 백업 저장시 필요)
    ```
+   oci-metadata -g region   # 리젼 확인
+   oci setup config         # 리젼과 oci에 계정에 설정된 api를 내용을 기반으로 단계별 설정
+
+   # 설정후 .oci/config 파일내에 정보는 아래와 같음 
    [DEFAULT]
    user=ocid1.user.oc1..xxxxxx
    fingerprint=xx:xx:xx:xx:xx
