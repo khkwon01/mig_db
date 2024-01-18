@@ -51,6 +51,10 @@
    * *데이터 재이관시 replication 재구성 할 때 아래 명령어로 target 데이터베이스에 gtid 수정을 시도해 보고 안되면 target 데이터베이스 재생성후 replication 구성필요*    
      call sys.set_gtid_purged("+<<소스GTID>:<<GAP_NUM>>");    
      ex) call sys.set_gtid_purged("+f8c1a38e-4ba6-11ee-af6f-0200170028ab:69-111");
+     * mysqlshell를 사용하여 데이터 dump시 백업관련 정보는 @.json파일에 저장되어 있어 해당 정보중 gtidExecuted를    
+       위 set_gtid_purged에 설정하여 replication 데이터 연결에 사용
+       ![image](https://github.com/khkwon01/mig_db/assets/8789421/447d8d42-1245-4ac0-8536-48abcbcd1f94)
+
 ### 3. object storage 기반으로 사용자 데이터 dump / load
 1. source database에서 데이터 dump
    - source database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
