@@ -56,7 +56,7 @@
        위 set_gtid_purged에 설정하여 replication 데이터 연결에 사용
        ![image](https://github.com/khkwon01/mig_db/assets/8789421/447d8d42-1245-4ac0-8536-48abcbcd1f94)
 
-4. 네트웍으로 데이터이관 (MySQL Shell 8.3)
+4. (참고) 네트웍으로 데이터이관 (MySQL Shell 8.3, 8.0에는 없는 기능임)
    - MySQL Shell에 새로 추가된 기능은 copyinstance, copyschemas를 사용하여 네트웍으로 데이터 이관
      ```
      # 아래는 예제임 (employees schema를 target인 10.1.10.10 mysql 서버에 이관)
