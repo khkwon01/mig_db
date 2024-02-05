@@ -62,7 +62,8 @@
      # 아래는 예제임 (employees schema를 target인 10.1.10.10 mysql 서버에 이관)
      util.copySchemas(['employees'], 'admin@10.1.10.10', {dryRun:false, threads:8, ignoreVersion:true,compatibility: ["strip_definers"]})
      ```
-   - 위에 예제로 이관후 결과화면
+   - 위에 예제로 이관후 결과화면   
+     아래 binlog 정보를 사용하여 channel이나 replication를 구성하면 됨.
      ![image](https://github.com/khkwon01/mig_db/assets/8789421/ea94f478-1c45-46a9-8674-c96ff9765997)
 
 
