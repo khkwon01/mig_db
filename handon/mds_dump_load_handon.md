@@ -56,6 +56,16 @@
        위 set_gtid_purged에 설정하여 replication 데이터 연결에 사용
        ![image](https://github.com/khkwon01/mig_db/assets/8789421/447d8d42-1245-4ac0-8536-48abcbcd1f94)
 
+4. 네트웍으로 데이터이관 (MySQL Shell 8.0)
+   - MySQL Shell에 새로 추가된 기능은 copyinstance, copyschemas를 사용하여 네트웍으로 데이터 이관
+     ```
+     # 아래는 예제임 (employees schema를 target인 10.1.10.10 mysql 서버에 이관)
+     util.copySchemas(['employees'], 'admin@10.1.10.10', {dryRun:false, threads:8, ignoreVersion:true,compatibility: ["strip_definers"]})
+     ```
+   - 위에 예제로 이관후 결과화면
+     ![image](https://github.com/khkwon01/mig_db/assets/8789421/ea94f478-1c45-46a9-8674-c96ff9765997)
+
+
 ### 3. object storage 기반으로 사용자 데이터 dump / load
 1. source database에서 데이터 dump
    - source database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
