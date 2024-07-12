@@ -5,7 +5,7 @@
 ### 2. Prerequisites (using oci object storage regarding source data dump storage)
 1. install mysql shell on vm (vm is redhat series like oracle, centos etc and it have public ip)    
    yum install mysql-shell
-2. oracle cloud command tool installation (oracle linux8 기준)
+2. oracle cloud command tool installation (based on oracle linux8)
    ```
    dnf -y install oraclelinux-developer-release-el8
    dnf install python36-oci-cli
@@ -14,9 +14,9 @@
    execute the below command if you use oci command on server.  
    ```
    oci-metadata -g region   # check region
-   oci setup config         # 리젼과 oci에 계정에 설정된 api를 내용을 기반으로 단계별 설정
+   oci setup config         
 
-   # 설정후 .oci/config 파일내에 정보는 아래와 같음 
+   # if you execute above command, generated .oci/config files and you can see the following like 
    [DEFAULT]
    user=ocid1.user.oc1..xxxxxx
    fingerprint=xx:xx:xx:xx:xx
@@ -25,16 +25,6 @@
    region=ap-chuncheon-1
    ```
 3. target db creation (in oci)
- 
-4. source 데이터 load
-   - 2번 sample 데이터를 vm상에 다운로드  
-   - 4번에서 생성된 source database 접속 (mysqlsh admin@<<source_ip>>, password: Welcome#1) 아래 명령어 수행하여 load
-     ```   
-     util.loadDump("/home/test/airport-db <-- 환경에 따라 변경", {dryRun: false, threads: 8, resetProgress:true, ignoreVersion:true})
-     ```
-7. source load된 데이터로 CRUD 테스트
-* Mysqlshell과 관련된 참조 URL
-   - https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html
      
 ### 2. vm 기반으로 사용자 데이터 dump / load 
 1. source database에서 데이터 dump
