@@ -26,37 +26,19 @@
    ```
 3. target db creation (in oci)
      
-### 2. vm 기반으로 사용자 데이터 dump / load 
-1. source database에서 데이터 dump
-   - source database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
+### 2. user data dump / load in VM 
+1. user data dump in source database
+   - source database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
      ```
-     # 테이블에 pk가 없을 경우 ignore_missing_pks 또는 create_invisible_pks를 compatibility에 추가
+     # if the table don't have pk, you can add option like `ignore_missing_pks` or `create_invisible_pks`
      util.dumpSchemas(["airportdb"], "/tmp/airport09", {ocimds: true, threads: 10, showProgress: true, compatibility: ["strip_definers", "strip_restricted_grants"]})  
      ```
-2. target database에서 데이터 load  
-   - target database 접속(mysqlsh admin@<<source_ip>>, password: Welcome#1)하여 아래 명령어 수행
+2. user data load in target database  
+   - target database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
      ```
-     util.loadDump("/tmp/airport09",{threads: 10, updateGtidSet:"append", ignoreExistingObjects: true, resetProgress:true, ignoreVersion:true})
+     util.loadDump("/tmp/airport09",{threads: 10, resetProgress:true, ignoreVersion:true})
      SELECT @@global.gtid_executed, @@global.gtid_purged;
      ```
-3. 이관후 필요하면 replication 연결 ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
-   * *데이터 재이관시 replication 재구성 할 때 아래 명령어로 target 데이터베이스에 gtid 수정을 시도해 보고 안되면 target 데이터베이스 재생성후 replication 구성필요*    
-     call sys.set_gtid_purged("+<<소스GTID>:<<GAP_NUM>>");    
-     ex) call sys.set_gtid_purged("+f8c1a38e-4ba6-11ee-af6f-0200170028ab:69-111");
-     * mysqlshell를 사용하여 데이터 dump시 백업관련 정보는 @.json파일에 저장되어 있어 해당 정보중 gtidExecuted를    
-       위 set_gtid_purged에 설정하여 replication 데이터 연결에 사용
-       ![image](https://github.com/khkwon01/mig_db/assets/8789421/447d8d42-1245-4ac0-8536-48abcbcd1f94)
-
-4. (참고) 네트웍으로 데이터이관 (MySQL Shell 8.1, 8.0에는 없는 기능임)
-   - MySQL Shell에 새로 추가된 기능은 copyinstance, copyschemas를 사용하여 네트웍으로 데이터 이관
-     ```
-     # 아래는 예제임 (employees schema를 target인 10.1.10.10 mysql 서버에 이관)
-     util.copySchemas(['employees'], 'admin@10.1.10.10', {dryRun:false, threads:8, ignoreVersion:true,compatibility: ["strip_definers"]})
-     ```
-   - 위에 예제로 이관후 결과화면   
-     아래 binlog 정보를 사용하여 channel이나 replication를 구성하면 됨.
-     ![image](https://github.com/khkwon01/mig_db/assets/8789421/ea94f478-1c45-46a9-8674-c96ff9765997)
-
 
 ### 3. object storage 기반으로 사용자 데이터 dump / load
 1. source database에서 데이터 dump
@@ -77,3 +59,16 @@
     util.loadDump("airport_dump", {schema: "airportdb", osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10})
     ``` 
 3. 이관후 필요하면 replication 연결 ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
+
+
+
+4. (참고) 네트웍으로 데이터이관 (MySQL Shell 8.1, 8.0에는 없는 기능임)
+   - MySQL Shell에 새로 추가된 기능은 copyinstance, copyschemas를 사용하여 네트웍으로 데이터 이관
+     ```
+     # 아래는 예제임 (employees schema를 target인 10.1.10.10 mysql 서버에 이관)
+     util.copySchemas(['employees'], 'admin@10.1.10.10', {dryRun:false, threads:8, ignoreVersion:true,compatibility: ["strip_definers"]})
+     ```
+   - 위에 예제로 이관후 결과화면   
+     아래 binlog 정보를 사용하여 channel이나 replication를 구성하면 됨.
+     ![image](https://github.com/khkwon01/mig_db/assets/8789421/ea94f478-1c45-46a9-8674-c96ff9765997)
+
