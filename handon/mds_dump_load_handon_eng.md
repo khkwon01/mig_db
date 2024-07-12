@@ -2,7 +2,7 @@
 ### 1. Data Migration Architecture using MySQLShell
 ![image](https://github.com/user-attachments/assets/7e396423-2c53-4355-853f-df86e4ea7c10)
 
-### 2. Prerequisites (using oci object storage regarding source data dump storage)
+### 2. Pre-install (if you use oci object storage regarding source data dump storage)
 1. install mysql shell on vm (vm is redhat series like oracle, centos etc and it have public ip)    
    yum install mysql-shell
 2. oracle cloud command tool installation (based on oracle linux8)
