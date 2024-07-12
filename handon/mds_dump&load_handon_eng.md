@@ -2,7 +2,7 @@
 ### 1. Data Migration Architecture using MySQLShell
 ![image](https://github.com/user-attachments/assets/7e396423-2c53-4355-853f-df86e4ea7c10)
 
-### 1. prerequisites (using oci object storage regarding source data dump storage)
+### 2. Prerequisites (using oci object storage regarding source data dump storage)
 1. install mysql shell on vm (vm is redhat series like oracle, centos etc and it have public ip)    
    yum install mysql-shell
 2. oracle cloud command tool installation (oracle linux8 기준)
@@ -10,11 +10,10 @@
    dnf -y install oraclelinux-developer-release-el8
    dnf install python36-oci-cli
    ```
-   - user 계정 홈 밑에 .oci/config 설정 구성 (아래 항목 설정)
-   아래 명령어를 사용하여 config 구성    
-   (mysqlshell로 object storage로 백업 저장시 필요)   
+   - .oci/config 설정 구성 under user account home directory.
+   execute the below command if you use oci command on server.  
    ```
-   oci-metadata -g region   # 리젼 확인
+   oci-metadata -g region   # check region
    oci setup config         # 리젼과 oci에 계정에 설정된 api를 내용을 기반으로 단계별 설정
 
    # 설정후 .oci/config 파일내에 정보는 아래와 같음 
@@ -25,14 +24,15 @@
    tenancy=ocid1.tenancy.oc1..xxxxxxxx
    region=ap-chuncheon-1
    ```
-4. source db 및 target db 생성 
-5. source 데이터 load
+3. target db creation (in oci)
+ 
+4. source 데이터 load
    - 2번 sample 데이터를 vm상에 다운로드  
    - 4번에서 생성된 source database 접속 (mysqlsh admin@<<source_ip>>, password: Welcome#1) 아래 명령어 수행하여 load
      ```   
      util.loadDump("/home/test/airport-db <-- 환경에 따라 변경", {dryRun: false, threads: 8, resetProgress:true, ignoreVersion:true})
      ```
-6. source load된 데이터로 CRUD 테스트
+7. source load된 데이터로 CRUD 테스트
 * Mysqlshell과 관련된 참조 URL
    - https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html
      
