@@ -49,22 +49,23 @@
      ```
      util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10, ocimds: true})
      ```
-4. target database에서 데이터 load   
+4. user data load in target database 
    - target database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
     ```
     util.loadDump("airport_dump", {schema: "airportdb", osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10})
     ``` 
-3. 이관후 필요하면 replication 연결 ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
+3. if you need to async data replication, refer to this ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
 
 
 ### 4. user data dump / load based on Network
-1. (참고) 네트웍으로 데이터이관 (MySQL Shell 8.1, 8.0에는 없는 기능임)
-   - MySQL Shell에 새로 추가된 기능은 copyinstance, copyschemas를 사용하여 네트웍으로 데이터 이관
+1. prerequisite
+   - install the mysql shell verion 8.1.0 and use over 8.1.0 version
+2. user data dump and load in source database
+   - use copyinstance, copyschemas api added new features in 8.1.0
      ```
-     # 아래는 예제임 (employees schema를 target인 10.1.10.10 mysql 서버에 이관)
+     # like below example, you connect source database and then execute the following command like (10.1.10.10 is target database)
      util.copySchemas(['employees'], 'admin@10.1.10.10', {dryRun:false, threads:8, ignoreVersion:true,compatibility: ["strip_definers"]})
      ```
-   - 위에 예제로 이관후 결과화면   
-     아래 binlog 정보를 사용하여 channel이나 replication를 구성하면 됨.
+   - After migrating the data from source to target, you can get the following info, and then you can use this info when configuring the replication   
      ![image](https://github.com/khkwon01/mig_db/assets/8789421/ea94f478-1c45-46a9-8674-c96ff9765997)
 
