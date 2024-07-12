@@ -1,10 +1,10 @@
-## MDS Handon for Data dump or load
+## MDS Data Dump(source,aws) and Load (Heatwave)
+![image](https://github.com/user-attachments/assets/7e396423-2c53-4355-853f-df86e4ea7c10)
 
-### 1. 필요 사항
+### 1. prerequisites (using oci object storage regarding source data dump storage)
 1. install mysql shell on vm (vm is redhat series like oracle, centos etc and it have public ip)    
    yum install mysql-shell
-2. sample data : [airport db](https://downloads.mysql.com/docs/airport-db.tar.gz)
-3. oracle cloud command tool 설치 (object storage 백업용, oracle linux8 기준)
+2. oracle cloud command tool installation (oracle linux8 기준)
    ```
    dnf -y install oraclelinux-developer-release-el8
    dnf install python36-oci-cli
@@ -24,7 +24,7 @@
    tenancy=ocid1.tenancy.oc1..xxxxxxxx
    region=ap-chuncheon-1
    ```
-4. source db 및 target db 생성 (click the icon -->): [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/khkwon01/oci-mysql-config/archive/refs/tags/mds-provision-3.7.zip)
+4. source db 및 target db 생성 
 5. source 데이터 load
    - 2번 sample 데이터를 vm상에 다운로드  
    - 4번에서 생성된 source database 접속 (mysqlsh admin@<<source_ip>>, password: Welcome#1) 아래 명령어 수행하여 load
