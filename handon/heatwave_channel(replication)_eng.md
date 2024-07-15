@@ -10,14 +10,13 @@ refer to the below url for this.
 
 ## 3. Channel - replication (OCI Menu: Databases > DB systems > channels ) 
 - In channel configuraiton, there are multi-section for configuring the replication between source and target
-### A. Source connection (공통)   
-아래 항목은 channel 구성(전체, 스키마, db, table등)시 기본 공통적으로 설정을 해야 하는 부분임.     
-![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
+  ### A. Source connection (common)    
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
 
-### B. Target DB system - 전체
-Source와 Target db간 전체 데이터가 동일해야 함   
-(channel filter 참고 자료 : https://docs.oracle.com/en-us/iaas/mysql-database/doc/creating-replication-channel.html#GUID-DF828619-669E-41CC-8BE5-F7A136AFF470)    
-- replication 구성 
+  ### B. Target DB system - 
+  Source와 Target db간 전체 데이터가 동일해야 함   
+  (channel filter 참고 자료 : https://docs.oracle.com/en-us/iaas/mysql-database/doc/creating-replication-channel.html#GUID-DF828619-669E-41CC-8BE5-F7A136AFF470)    
+- replication configuration
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
 
 - replication 완료후 상태   
