@@ -1,9 +1,6 @@
-# 1. 전체 MDS 구성도    
-OCI에 있는 MDS, HeatWave, Replication 테스트를 하기 위해 아래와 같이 구성하여 테스트 진행    
-Source(MySQL 5.7)를 제외하고는 아래 Delpoy를 아이콘을 클릭하여 설치를 진행하면 자동으로 구성을 진행함      
-[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/khkwon01/terraform-mds/archive/refs/tags/mds-heatwave-v3.3.0.zip)   
+## 1. Channle configuration flow    
+![image](https://github.com/user-attachments/assets/9b826989-09ba-4066-94d3-ea21e27243e2)
 
-![Alt text](image.png)
 
 ## 2) channel - replication ( 메뉴 Databases > DB systems > channels ) 
 ### A. Source connection (공통)   
