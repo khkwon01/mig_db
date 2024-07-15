@@ -13,99 +13,41 @@ refer to the below url for this.
   ### A. Source connection (common)    
   ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
 
-  ### B. Target DB system - 
-  Source와 Target db간 전체 데이터가 동일해야 함   
-  (channel filter 참고 자료 : https://docs.oracle.com/en-us/iaas/mysql-database/doc/creating-replication-channel.html#GUID-DF828619-669E-41CC-8BE5-F7A136AFF470)    
-- replication configuration
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
+  ### B. Target DB system - replication for all schema
+  Must be same data between source and target through dump data  
+  (channel filter referenace manual : https://docs.oracle.com/en-us/iaas/mysql-database/doc/creating-replication-channel.html#GUID-DF828619-669E-41CC-8BE5-F7A136AFF470)    
+  - channel(replicatio) configuration
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/5b98d5dd-3e7a-482d-9a1f-654a1e919f81)
 
-- replication 완료후 상태   
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/22f85991-de63-4ed1-a108-a76659978f38)
-
-- replication 테스트
-  - Source DDL/DML 수행   
-    ```
-    // source에서 아래와 같이 수행하면 target에서 생성
-    create database test1;
-    use test1;
-    create table t1 (id int primary key, nm varchar(10));
-    insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
+  - check channel status after configuring replication (green is normal status)   
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/22f85991-de63-4ed1-a108-a76659978f38)
   
-    // target에서 아래 명령어를 수행하면 복제된 걸 확인 가능
-    ```
-  - Target 조회 결과    
-    <img width="823" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/33e3b891-87c6-4e26-a2ea-c3a921f16ee8">
-   
-### C. Target DB system - db   
-Source와 Target db간 schema 기준 데이터가 동일해야 함
-- replication 구성
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/71d2b80e-00ee-4c54-9f12-36f1af10c572)    
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/39b25f43-11c2-414d-85f6-d623372a4c45)
+  ### C. Target DB system - replication for only specific db(schema)   
 
-- replication 완료후 상태    
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/4be4d667-9691-4fdc-afc3-5b92db953051)
+  - channel(replicatio) configuration
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/71d2b80e-00ee-4c54-9f12-36f1af10c572)    
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/39b25f43-11c2-414d-85f6-d623372a4c45)
 
-- replication 테스트
-  - Source DDL/DML 수행   
-    ```
-    use world;
-    create table t1 (id int primary key, nm varchar(10));
-    insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
-    update t1 set nm = 'changenm2' where id = 2;
-    ```
-  - Target 조회 결과    
-    <img width="751" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/df635af9-3b62-4615-998c-ce49c0c6d4cf">
+  - check channel status after configuring replication (green is normal status)     
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/4be4d667-9691-4fdc-afc3-5b92db953051)
 
-### D. Target DB system - table-*    
-Source와 Target db간 테이블 기준 데이터가 동일해야 함    
-- replication 구성
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/42bc905a-d2ea-42f0-8764-9c7300a716db)
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/d866119c-357f-47de-8e42-aaaf37dd07fe)
+  ### D. Target DB system - replication for table-*      
+  - channel(replicatio) configuration
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/42bc905a-d2ea-42f0-8764-9c7300a716db)
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/d866119c-357f-47de-8e42-aaaf37dd07fe)
+    
+  - check channel status after configuring replication (green is normal status)     
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/f2c0c80d-4efb-4c96-88a8-de5017dddb5c)  
 
-
-- replication 완료후 상태    
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/f2c0c80d-4efb-4c96-88a8-de5017dddb5c)
-
-- replication 테스트
-  - Source DDL/DML 수행   
-    ```
-    use world;
-    insert into t1 values (4, 'nm4'), (5, 'nm5'), (6, 'nm6');
-    update t1 set nm = 'changenm5' where id = 5;
-    create table t2 (id int primary key, nm varchar(10));
-    insert into t2 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');
-    ```
-  - Target 조회 결과     
-    <img width="755" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/2b5e9a1b-6016-49f7-bf31-5f16ccca09ea">
+  ### E. Target DB system - replication for rewriting source db name(schema)
+  - channel(replicatio) configuration
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/6e921f2d-c319-46ad-a848-7a03b0bda25a)
   
-  - 추가 테스트    
-    - 1개 정책에 여러개 table 이름 패턴 추가 - 지원안됨     
-      ![image](https://github.com/khkwon01/mig_db/assets/8789421/55a77317-f7d3-4ad0-bad3-9b978f5936f8)     
-    - 여러개 정책에 table 이름 패턴 추가 - 지원     
-      ![image](https://github.com/khkwon01/mig_db/assets/8789421/9184ac5e-32b2-48f3-8c25-db35a59ea972)    
+  - check channel status after configuring replication (green is normal status)        
+    ![image](https://github.com/khkwon01/mig_db/assets/8789421/4c7c9f10-b624-499a-ad6b-3ad83a0daede)
 
-### E. Target DB system - rewrite-db 
-Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
-- replication 구성
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/6e921f2d-c319-46ad-a848-7a03b0bda25a)
-
-- replication 완료후 상태      
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/4c7c9f10-b624-499a-ad6b-3ad83a0daede)
-
-- replication 테스트
-  - Source DDL/DML 수행   
-    ```
-    use world;
-    update city set name='Kabul_change' where id = 1;    
-    create table t1 (id int primary key, nm varchar(10));
-    insert into t1 values (1, 'nm1'), (2, 'nm2'), (3, 'nm3');    
-    ```
-  - Target 조회 결과     
-    <img width="889" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/dd92f28f-e7a6-45b2-8d79-5c07c136586a"> 
-    <img width="863" alt="image" src="https://github.com/khkwon01/mig_db/assets/8789421/48d22449-b07b-4b12-92ad-41d766a07184">
-
-## 3) channel(replication) 로그 확인
-### A. source (db접속)
+## 3) channel(replication) log check(mornitoring)
+### A. source (db connection)
     ```
     SHOW GLOBAL VARIABLES;
     SHOW GLOBAL STATUS;
@@ -114,7 +56,7 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
     SHOW MASTER LOGS;
     SELECT * FROM performance_schema.error_log;
     ```
-### B. target (db접속)
+### B. target (db connection)
     ```
     SHOW GLOBAL VARIABLES;
     SHOW GLOBAL STATUS;
@@ -127,20 +69,7 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
     SELECT * FROM performance_schema.replication_applier_status_by_worker\G
     SELECT * FROM performance_schema.error_log;
 
-    # replication 지연 확인
+    # check replication lag
     select * from sys.replication_lag;
     select * from sys.replication_status_full\G
     ```    
-## 4) channel 강제로 연결 (소스단에 binlog가 없어졌을 경우)
-### A. 소스 DB에서 현 시점 최종 gtid 확인
-    select @@gtid_executed, @@gtid_purged\G    
-    예제로 아래와 같이 내용이 출력된다면,  아래 내용중  165bb3ee-3585-11ee-901d-02001701d33a:1-6 를 복사하고    
-    *************************** 1. row ***************************    
-    @@gtid_executed: 165bb3ee-3585-11ee-901d-02001701d33a:1-6   
-    @@gtid_purged: 165bb3ee-3585-11ee-901d-02001701d33a:1-5   
-
-### B. 타켓 DB에서  admin 계정으로 아래 명령어 수행    
-    위에 소스 DB에서 copy한 gtid를 넣어주고 아래 명령어 수행 (target에서 executed가 4까지 되었을 경우)
-    call sys.set_gtid_purged("+165bb3ee-3585-11ee-901d-02001701d33a:5-6")     
-
-### C. channel 재연결 (resume)
