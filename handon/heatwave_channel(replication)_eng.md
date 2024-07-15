@@ -1,8 +1,12 @@
 ## 1. Channle configuration flow    
-![image](https://github.com/user-attachments/assets/9b826989-09ba-4066-94d3-ea21e27243e2)
+![image](https://github.com/user-attachments/assets/de4ed208-231f-4e11-8742-deeb945b86a3)
 
 ## 2. Limitations and Cautions
-
+refer to the below url for this.
+- https://docs.oracle.com/en-us/iaas/mysql-database/doc/limitations2.html
+  - only row-based replication is supported
+  - only replication from single source is supported
+  - Changes to mysql schema are not replicated and can be cause or break replication
 
 ## 3. Channel - replication (OCI Menu: Databases > DB systems > channels ) 
 - In channel configuraiton, there are multi-section for configuring the replication between source and target
