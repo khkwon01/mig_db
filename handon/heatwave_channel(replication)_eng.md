@@ -15,7 +15,7 @@ refer to the below url for this.
 
   ### B. Target DB system - filter setup for AWS RDS
   The Aws RDS included extra schema and table for their service which it is not officials.
-  So firstly, you must have to filter that schema and tables.
+  So firstly, you must have to filter that schema and tables. (There are several option according to database type)       
   - You click "Show channel filter options" in set-up information
     ![image](https://github.com/user-attachments/assets/7482811a-36f2-4d1b-b2b2-c0bc94263c76)
   - If you see channel filter section, you can filter AWS RDS schema and tables like this
