@@ -11,14 +11,14 @@ refer to the below url for this.
 ## 3. Channel - replication (OCI Menu: Databases > DB systems > channels ) 
 - In channel configuraiton, there are multi-section for configuring the replication between source and target
   ### A. Source connection (common)    
-  ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
+  ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)    
 
   ### B. Target DB system - filter setup for AWS RDS
   The Aws RDS included extra schema and table for their service which it is not officials.
   So firstly, you must have to filter that schema and tables. (There are several option according to database type)       
-  - You click "Show channel filter options" in set-up information
-    ![image](https://github.com/user-attachments/assets/7482811a-36f2-4d1b-b2b2-c0bc94263c76)
-  - If you see channel filter section, you can filter AWS RDS schema and tables like this
+  - You click "Show channel filter options" in set-up information    
+    ![image](https://github.com/user-attachments/assets/7482811a-36f2-4d1b-b2b2-c0bc94263c76)    
+  - If you see channel filter section, you can filter AWS RDS schema and tables like this     
     ![image](https://github.com/user-attachments/assets/585f8ae5-a946-40f2-aedd-933efaf6ce5a)
 
   And if you need to add some filter for your data, you can filter the next course.
