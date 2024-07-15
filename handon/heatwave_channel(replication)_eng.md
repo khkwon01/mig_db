@@ -2,7 +2,7 @@
 ![image](https://github.com/user-attachments/assets/9b826989-09ba-4066-94d3-ea21e27243e2)
 
 
-## 2) channel - replication ( 메뉴 Databases > DB systems > channels ) 
+## 2) channel - replication (OCI Menu: Databases > DB systems > channels ) 
 ### A. Source connection (공통)   
 아래 항목은 channel 구성(전체, 스키마, db, table등)시 기본 공통적으로 설정을 해야 하는 부분임.     
 ![image](https://github.com/khkwon01/mig_db/assets/8789421/9676817d-78f5-4018-9ac0-3c0520107fa3)
