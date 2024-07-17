@@ -46,8 +46,8 @@
 3. user data dump in source database
    - source database connect(mysqlsh admin@<<source_ip>>, password:<<source password>>) and execute below command
      ```
-     util.dumpInstance('test', {osBucketName:"mysql-poc-bucket",osNamespace:"ax5ppfxe6bxg", "ocimds": "true", "compatibility": ["strip_definers", "strip_restricted_grants"]})
-     util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"ax5ppfxe6bxg", osNamespace:"ax5ppfxe6bxg", threads:10, ocimds: true})
+     util.dumpInstance('test', {osBucketName:"mysql-poc-bucket",osNamespace:"ax5ppfxe6bxg", "ocimds": "true", "includeSchemas": ["",""], threads:5, "compatibility": ["strip_definers", "strip_restricted_grants"]})
+     util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:10, ocimds: true})
      ```
 4. user data load in target database 
    - target database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
