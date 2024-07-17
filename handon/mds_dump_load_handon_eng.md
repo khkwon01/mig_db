@@ -48,12 +48,11 @@
    - For protecting unnecessory schemas, you can include includesSchemas options
      ```
      util.dumpInstance('test', {osBucketName:"mysql-poc-bucket",osNamespace:"ax5ppfxe6bxg", "ocimds": "true", "includeSchemas": ["",""], threads:5, "compatibility": ["strip_definers", "strip_restricted_grants"]})
-     util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:10, ocimds: true})
      ```
 4. user data load in target database 
    - target database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
     ```
-    util.loadDump("airport_dump", {schema: "airportdb", osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10})
+    util.loadDump("test", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:5})
     ``` 
 3. if you need to async data replication, refer to this ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
 
