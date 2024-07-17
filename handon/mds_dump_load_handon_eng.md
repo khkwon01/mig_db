@@ -43,11 +43,11 @@
 ### 3. user data dump / load based on object storage
 1. prerequisite
    - create the bucket for using data dump in oci object storage
-   - set-up the permission using the bucket (resource authority or pre-authenticated(read/write))
 3. user data dump in source database
    - source database connect(mysqlsh admin@<<source_ip>>, password:<<source password>>) and execute below command
      ```
-     util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"migdata", osNamespace:"idazzj~~~~", threads:10, ocimds: true})
+     util.dumpInstance('test', {osBucketName:"mysql-poc-bucket",osNamespace:"ax5ppfxe6bxg", "ocimds": "true", "compatibility": ["strip_definers", "strip_restricted_grants"]})
+     util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"ax5ppfxe6bxg", osNamespace:"ax5ppfxe6bxg", threads:10, ocimds: true})
      ```
 4. user data load in target database 
    - target database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
