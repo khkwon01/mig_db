@@ -45,6 +45,7 @@
    - create the bucket for using data dump in oci object storage
 3. user data dump in source database
    - source database connect(mysqlsh admin@<<source_ip>>, password:<<source password>>) and execute below command
+   - For protecting unnecessory schemas, you can include includesSchemas options
      ```
      util.dumpInstance('test', {osBucketName:"mysql-poc-bucket",osNamespace:"ax5ppfxe6bxg", "ocimds": "true", "includeSchemas": ["",""], threads:5, "compatibility": ["strip_definers", "strip_restricted_grants"]})
      util.dumpSchemas(["airportdb"], "airport_dump", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:10, ocimds: true})
