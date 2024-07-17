@@ -54,7 +54,7 @@
     ```
     util.loadDump("test", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:5})
     ``` 
-3. if you need to async data replication, refer to this ([mds replication연결](https://github.com/khkwon01/mig_db/blob/main/handon/mds_replication_handon.md))
+3. if you need to async data replication, refer to this ([heatwave replication](https://github.com/khkwon01/mig_db/blob/main/handon/heatwave_channel(replication)_eng.md))
 
 
 ### 4. user data dump / load based on Network
