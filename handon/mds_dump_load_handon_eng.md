@@ -50,7 +50,7 @@
      util.dumpInstance('test', {osBucketName:"mysql-poc-bucket",osNamespace:"ax5ppfxe6bxg", "ocimds": "true", "includeSchemas": ["",""], threads:5, "compatibility": ["strip_definers", "strip_restricted_grants"]})
      ```
 4. user data load in target database 
-   - target database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
+   - target database connect (mysqlsh admin@<<source_ip>>, password:<<source password>>) and execute below command
     ```
     util.loadDump("test", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:5})
     ``` 
