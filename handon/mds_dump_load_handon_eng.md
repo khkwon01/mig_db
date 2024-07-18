@@ -36,7 +36,7 @@
 2. user data load in target database  
    - target database connect (mysqlsh admin@<<source_ip>>, password: Welcome#1) and execute below command
      ```
-     util.loadDump("/tmp/airport09",{threads: 10, resetProgress:true, ignoreVersion:true})
+     util.loadDump("/tmp/airport09",{threads: 10, resetProgress:true, ignoreVersion:true, deferTableIndexes: all, updateGtidSet:"append"})
      SELECT @@global.gtid_executed, @@global.gtid_purged;
      ```
 
@@ -52,7 +52,7 @@
 4. user data load in target database 
    - target database connect (mysqlsh admin@<<source_ip>>, password:<<source password>>) and execute below command
     ```
-    util.loadDump("test", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:5, resetProgress:true, ignoreVersion:true})
+    util.loadDump("test", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:5, resetProgress:true, ignoreVersion:true, updateGtidSet:"append", deferTableIndexes: all})
     ``` 
 3. if you need to async data replication, refer to this ([heatwave replication](https://github.com/khkwon01/mig_db/blob/main/handon/heatwave_channel(replication)_eng.md))
 
@@ -64,7 +64,7 @@
    - use copyinstance, copyschemas api added new features in 8.1.0
      ```
      # like below example, you connect source database and then execute the following command like (10.1.10.10 is target database)
-     util.copySchemas(['employees'], 'admin@10.1.10.10', {dryRun:false, threads:8, ignoreVersion:true,compatibility: ["strip_definers"]})
+     util.copySchemas(['employees'], 'admin@10.1.10.10', {dryRun:false, threads:8, ignoreVersion:true,compatibility: ["strip_definers"], updateGtidSet:"append", deferTableIndexes: all})
      ```
    - After migrating the data from source to target, you can get the following info, and then you can use this info when configuring the replication   
      ![image](https://github.com/khkwon01/mig_db/assets/8789421/ea94f478-1c45-46a9-8674-c96ff9765997)
