@@ -52,7 +52,7 @@
 4. user data load in target database 
    - target database connect (mysqlsh admin@<<source_ip>>, password:<<source password>>) and execute below command
     ```
-    util.loadDump("test", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:5})
+    util.loadDump("test", {osBucketName:"mysql-poc-bucket", osNamespace:"ax5ppfxe6bxg", threads:5, resetProgress:true, ignoreVersion:true})
     ``` 
 3. if you need to async data replication, refer to this ([heatwave replication](https://github.com/khkwon01/mig_db/blob/main/handon/heatwave_channel(replication)_eng.md))
 
