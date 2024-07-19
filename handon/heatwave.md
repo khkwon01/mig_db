@@ -29,4 +29,20 @@
   - if you use lakehosue, Gen-AI, you set-up over 512GB for heatwave cluster node
   - Shape details : MySQL hardware configuration, HeatWave cluster configuration : Heatwave cluster hardware configuration
   ![image](https://github.com/user-attachments/assets/e0a41c1c-dd4a-43ec-b770-64e67d81bf2e)
+- configure storage size storing user data (provide backup size as free)
+  ![image](https://github.com/user-attachments/assets/a288a2e0-6b73-447a-83d0-a429d3987075)
+- configure backup plan if you need
+- if you select `Select backup window` option, you can setup manual backup window
+  ![image](https://github.com/user-attachments/assets/fe0d6e48-134f-43f7-aa0d-1b23f4d8afcb)
+- For selecting Database version or making private FQDN, you can click like following menu
+  ![image](https://github.com/user-attachments/assets/589ee1bb-7bd9-466e-8447-62ef824d1fec)
+  - in configuration tab, you select database version (if you use Gen-AI, you select over 9.0.0-innovation)
+    ![image](https://github.com/user-attachments/assets/3d783fdf-6050-4f64-bdb3-772151b32268)
+  - in connections tab, you input Hostname like same of inital name
+    ![image](https://github.com/user-attachments/assets/6c6c0b65-9782-4e52-b167-d119fcdf4726)
+### 5. Lastly, click the create button in bottom line.
+![image](https://github.com/user-attachments/assets/b62d90a6-cc37-4207-bc98-abf7cd8f6a5e)
+  
+
+
 
