@@ -29,7 +29,7 @@
   - if you use lakehosue, Gen-AI, you set-up over 512GB for heatwave cluster node
   - Shape details : MySQL hardware configuration, HeatWave cluster configuration : Heatwave cluster hardware configuration
   ![image](https://github.com/user-attachments/assets/e0a41c1c-dd4a-43ec-b770-64e67d81bf2e)
-- configure storage size storing user data (provide backup size as free)
+- configure storage size storing user data (provide free backup size as same storage size)
   ![image](https://github.com/user-attachments/assets/a288a2e0-6b73-447a-83d0-a429d3987075)
 - configure backup plan if you need
 - if you select `Select backup window` option, you can setup manual backup window
