@@ -39,7 +39,7 @@ For AWS RDS database,
     ![image](https://github.com/user-attachments/assets/48abc3b5-3208-49e5-9a2f-78822b48b4fe)
   - execute validate for migration (click validate button)
     ![image](https://github.com/user-attachments/assets/e332a95b-86f8-4b5f-b459-f76fa1356151)
-  - 
+    
 
 
 
