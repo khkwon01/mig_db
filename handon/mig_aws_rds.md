@@ -1,4 +1,8 @@
 ### 1. Prerequesites    
+For network between AWS and OCI,   
+- use VPN or use Dedicated network (ex,Direct conenct)
+- use public ip of RDS
+
 For AWS RDS database,
 - enable log-bin and gtid 
 - setup binlog_foramt to ROW
