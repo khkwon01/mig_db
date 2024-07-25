@@ -1,6 +1,6 @@
 ### 1. Prerequesites    
 For AWS RDS database,
-- enable log-bin  
+- enable log-bin and gtid 
 - setup binlog_foramt to ROW
 - setup binlog_row_image to FULL
 - setup binlog_row_metadata to FULL
