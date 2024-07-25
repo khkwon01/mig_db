@@ -19,7 +19,7 @@ For AWS RDS database,
 - login in mysql rds
   ```mysqlsh admin@database1.xxxxx.ap-northeast-2.rds.amazonaws.com```
 - `if you use util.load or util.dump in mysql-shell, you have to enable performance schema paramater modifing the parameter of rds like`
-  ![image](https://github.com/user-attachments/assets/2c898dbf-5175-4dcd-ab50-90045e518dfb)
+  ![image](https://github.com/user-attachments/assets/2c898dbf-5175-4dcd-ab50-90045e518dfb)   
 
 ### 2. Migration Method
 #### 1. OCI DMS (Database Migration service)
@@ -27,24 +27,24 @@ For AWS RDS database,
 - create database connections
   - aws connection setup
     ![image](https://github.com/user-attachments/assets/cc6b076f-9a0b-48a6-bdb7-2b532266c75b)   
-    ![image](https://github.com/user-attachments/assets/387a4b14-c9b5-4087-9795-02e81044e970)
+    ![image](https://github.com/user-attachments/assets/387a4b14-c9b5-4087-9795-02e81044e970)   
   - heatwave connection setup
     ![image](https://github.com/user-attachments/assets/f09b5c8c-8f0f-45a6-b853-727b2b2c0ae7)
-    ![image](https://github.com/user-attachments/assets/4f6a4bc3-1f9e-4ab2-8ef1-a87697f8d4d9)
+    ![image](https://github.com/user-attachments/assets/4f6a4bc3-1f9e-4ab2-8ef1-a87697f8d4d9)   
   - status check after creating each connection
-    ![image](https://github.com/user-attachments/assets/f38f1121-2aa2-42e3-a400-1833573f4733)
+    ![image](https://github.com/user-attachments/assets/f38f1121-2aa2-42e3-a400-1833573f4733)   
 - create migration and migrate
   - migration service setup
     ![image](https://github.com/user-attachments/assets/4e89b5d7-063d-46a9-85d4-bcfbdba4aebe)
     ![image](https://github.com/user-attachments/assets/525c1a1f-fa61-418a-a38b-8d3f9963b750)
     ![image](https://github.com/user-attachments/assets/ff3bf1f0-624d-4ead-9be9-da4ec4449e4a)
-    ![image](https://github.com/user-attachments/assets/6ce23834-cc0e-40dc-931c-26b7e59555b2)
+    ![image](https://github.com/user-attachments/assets/6ce23834-cc0e-40dc-931c-26b7e59555b2)    
   - status check after creating migration service
-    ![image](https://github.com/user-attachments/assets/48abc3b5-3208-49e5-9a2f-78822b48b4fe)
+    ![image](https://github.com/user-attachments/assets/48abc3b5-3208-49e5-9a2f-78822b48b4fe)   
   - execute validate for migration (click validate button)
-    ![image](https://github.com/user-attachments/assets/e332a95b-86f8-4b5f-b459-f76fa1356151)
+    ![image](https://github.com/user-attachments/assets/e332a95b-86f8-4b5f-b459-f76fa1356151)   
   - migrate the data from aws to heatwave
-    ![image](https://github.com/user-attachments/assets/1c0a2a85-bce2-48a2-8e8b-69f44643d434)
+    ![image](https://github.com/user-attachments/assets/1c0a2a85-bce2-48a2-8e8b-69f44643d434)   
     
 
 
