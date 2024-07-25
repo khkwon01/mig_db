@@ -49,7 +49,13 @@ For AWS RDS database,
     ![image](https://github.com/user-attachments/assets/1c0a2a85-bce2-48a2-8e8b-69f44643d434)   
     
 #### 2. MySQL SHELL (Dump/Load util)
+- Prerequesites
+  - create object storage in oci and setup oci cli for using object storage in mysql-shell    
+    oci env setup : ```oci setup config```
 - dump the source data
+  ```
+  util.dumpInstance('test', {osBucketName:"mysql-test-bucket",osNamespace:"a------xg", "ocimds": "true", "includeSchemas": ["airportdb"], threads:5, "compatibility": ["strip_definers", "strip_restricted_grants", "create_invisible_pks", "force_innodb"]})
+  ```
   
 
 
