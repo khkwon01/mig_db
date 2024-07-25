@@ -52,11 +52,15 @@ For AWS RDS database,
 - Prerequesites
   - create object storage in oci and setup oci cli for using object storage in mysql-shell    
     oci env setup : ```oci setup config```
-- dump the source data
+- dump the source data (RDS --> oci object storage)
   ```
   util.dumpInstance('test', {osBucketName:"mysql-test-bucket",osNamespace:"a------xg", "ocimds": "true", "includeSchemas": ["airportdb"], threads:5, "compatibility": ["strip_definers", "strip_restricted_grants", "create_invisible_pks", "force_innodb"]})
   ```
-  
+- load the source data into heatwave (oci object storage --> Heatwave)
+  ```
+  util.loadDump("test", {osBucketName:"mysql-test-bucket", osNamespace:"a------xg", threads:5, resetProgress:true, ignoreVersion:true, updateGtidSet:"append", deferTableIndexes: all})
+  ```
+- configure channel(replication) if needs
 
 
 
