@@ -43,6 +43,8 @@ For AWS RDS database,
     ![image](https://github.com/user-attachments/assets/48abc3b5-3208-49e5-9a2f-78822b48b4fe)
   - execute validate for migration (click validate button)
     ![image](https://github.com/user-attachments/assets/e332a95b-86f8-4b5f-b459-f76fa1356151)
+  - migrate the data from aws to heatwave
+    ![image](https://github.com/user-attachments/assets/1c0a2a85-bce2-48a2-8e8b-69f44643d434)
     
 
 
