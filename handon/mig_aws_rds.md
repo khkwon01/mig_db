@@ -19,7 +19,9 @@ For AWS RDS database,
 - login in mysql rds
   ```mysqlsh admin@database1.xxxxx.ap-northeast-2.rds.amazonaws.com```
 - `if you use util.load or util.dump in mysql-shell, you have to enable performance schema paramater modifing the parameter of rds like`
-  ![image](https://github.com/user-attachments/assets/2c898dbf-5175-4dcd-ab50-90045e518dfb)   
+  ![image](https://github.com/user-attachments/assets/2c898dbf-5175-4dcd-ab50-90045e518dfb)
+- install oracle oci cli
+  ```bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"```
 
 ### 2. Migration Method
 #### 1. OCI DMS (Database Migration service)
@@ -46,6 +48,9 @@ For AWS RDS database,
   - migrate the data from aws to heatwave   
     ![image](https://github.com/user-attachments/assets/1c0a2a85-bce2-48a2-8e8b-69f44643d434)   
     
+#### 2. MySQL SHELL (Dump/Load util)
+- dump the source data
+  
 
 
 
