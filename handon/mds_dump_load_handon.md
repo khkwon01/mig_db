@@ -36,6 +36,7 @@
    - https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html
 
 ### 2. 사용자 데이터 이관 방법
+![image](https://github.com/user-attachments/assets/12caf80a-c31a-4433-9e0a-236ed4444516)
      
 ### 1) vm 기반으로 사용자 데이터 dump / load 
 1. source database에서 데이터 dump
