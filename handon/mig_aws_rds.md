@@ -25,6 +25,8 @@ For AWS RDS database,
 
 ### 2. Migration Method
 #### 1. OCI DMS (Database Migration service)
+![image](https://github.com/user-attachments/assets/3c6178b1-a4eb-4072-85d2-618614c5068a)
+
 - Process :  connections create --> migration
 - create database connections    
   - aws connection setup    
