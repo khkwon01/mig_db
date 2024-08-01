@@ -27,7 +27,8 @@ For AWS RDS database,
 #### 1. OCI DMS (Database Migration service)
 ![image](https://github.com/user-attachments/assets/3c6178b1-a4eb-4072-85d2-618614c5068a)
 
-- Process :  connections create --> migration
+- Migration Process :  connections create --> migration
+
 - create database connections    
   - aws connection setup    
     ![image](https://github.com/user-attachments/assets/cc6b076f-9a0b-48a6-bdb7-2b532266c75b)   
@@ -37,6 +38,7 @@ For AWS RDS database,
     ![image](https://github.com/user-attachments/assets/4f6a4bc3-1f9e-4ab2-8ef1-a87697f8d4d9)   
   - status check after creating each connection   
     ![image](https://github.com/user-attachments/assets/f38f1121-2aa2-42e3-a400-1833573f4733)   
+
 - create migration and migrate  
   - migration service setup   
     ![image](https://github.com/user-attachments/assets/4e89b5d7-063d-46a9-85d4-bcfbdba4aebe)
