@@ -7,7 +7,7 @@
 3. oracle cloud command tool 설치 (object storage 백업용, oracle linux8 기준)
    ```
    dnf -y install oraclelinux-developer-release-el8
-   dnf install python39-oci-cli
+   dnf install python36-oci-cli
    ```
    - user 계정 홈 밑에 .oci/config 설정 구성 (아래 항목 설정)
    아래 명령어를 사용하여 config 구성    
