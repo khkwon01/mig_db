@@ -9,7 +9,6 @@
    ```
    dnf -y install oraclelinux-developer-release-el8
    dnf -y install python36-oci-cli
-   dnf install python36
    ```
    - .oci/config configuration under user account home directory.
    execute the below command if you use oci command on server.  
