@@ -4,3 +4,5 @@
 
 - 참고 문서
   - https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3609&p210_wec=&session=105410453607238
+  - https://blogs.oracle.com/mysql/post/migrating-from-a-live-on-premises-mysql-80-database-to-mysql-database-service-using-gtids
+
