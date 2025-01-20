@@ -65,7 +65,7 @@ For AWS RDS database,
   util.loadDump("test", {osBucketName:"mysql-test-bucket", osNamespace:"a------xg", threads:5, resetProgress:true, ignoreVersion:true, updateGtidSet:"append", deferTableIndexes: all})
   ```
 - configure channel(replication) if needs
-
+  - https://blogs.oracle.com/mysql/post/successful-rds-to-oci-mysql-heatwave-migration-with-replication-channel-filters
 
 
 
