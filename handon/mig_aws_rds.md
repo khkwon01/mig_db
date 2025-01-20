@@ -67,6 +67,9 @@ For AWS RDS database,
 - configure channel(replication) if needs
   - https://blogs.oracle.com/mysql/post/successful-rds-to-oci-mysql-heatwave-migration-with-replication-channel-filters
 
-
+#### 3. 이관 전/후 테이블 비교
+```
+select md5(sum(aid)), md5(sum(filler)), count(1) from qb_accounts;
+```
 
 
