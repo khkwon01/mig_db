@@ -56,6 +56,7 @@ For AWS RDS database,
 - Prerequesites
   - create object storage in oci and setup oci cli for using object storage in mysql-shell    
     oci env setup : ```oci setup config```
+  - 참고 문서 : https://blogs.oracle.com/mysql/post/moving-mysql-databases-from-aws-to-oci-using-mysql-shell
 - dump the source data (RDS --> oci object storage)
   ```
   util.dumpInstance('test', {osBucketName:"mysql-test-bucket",osNamespace:"a------xg", "ocimds": "true", "includeSchemas": ["airportdb"], threads:5, "compatibility": ["strip_definers", "strip_restricted_grants", "create_invisible_pks", "force_innodb"]})
