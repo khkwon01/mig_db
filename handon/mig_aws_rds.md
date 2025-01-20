@@ -56,6 +56,10 @@ For AWS RDS database,
     ![image](https://github.com/user-attachments/assets/1c0a2a85-bce2-48a2-8e8b-69f44643d434)   
     
 #### 2. MySQL SHELL (Dump/Load util)
+
+![image](https://github.com/user-attachments/assets/fec90a84-f106-4cbb-baf9-7a3ac47c52db)
+
+
 - Prerequesites
   - create object storage in oci and setup oci cli for using object storage in mysql-shell    
     oci env setup : ```oci setup config```
