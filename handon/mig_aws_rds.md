@@ -1,3 +1,6 @@
+![mysql-aws](https://github.com/user-attachments/assets/e15b3093-dcab-4b8a-beba-ab05325d95a8)
+
+
 ### 1. Prerequesites    
 For network between AWS and OCI,   
 - use VPN or use Dedicated network (ex,Direct conenct)
