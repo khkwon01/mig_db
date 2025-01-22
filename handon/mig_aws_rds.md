@@ -1,7 +1,7 @@
 ![mysql-aws](https://github.com/user-attachments/assets/e15b3093-dcab-4b8a-beba-ab05325d95a8)
 
 
-### 1. Prerequesites    
+### 1. 선결조건 (Prerequesites)    
 For network between AWS and OCI,   
 - use VPN or use Dedicated network (ex,Direct conenct)
 - use public ip of RDS
@@ -12,7 +12,11 @@ For AWS RDS database,
 - setup binlog_row_image to FULL
 - setup binlog_row_metadata to FULL
 
-### 1. Amazon linux setup using MySQL shell
+Heatwave에서 사용할 수 있는 MySQL 리소스 타입
+- https://docs.oracle.com/en-us/iaas/mysql-database/doc/supported-shapes.html
+
+
+### 2. MySQL Shell 설치 및 구성 (Amazon linux setup using MySQL shell)
 - loing in Amazon linux   
   ```ssh -i "khk-aws-key.pem" ec2-user@<<ec2 vm public ip>>```
 - install mysql repo for oracle   
@@ -26,8 +30,8 @@ For AWS RDS database,
 - install oracle oci cli   
   ```bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"```
 
-### 2. Migration Method
-#### 1. OCI DMS (Database Migration service)
+### 3. 이관 방안 (Migration Method)
+#### 1. OCI DMS (Database Migration service)툴 사용
 ![image](https://github.com/user-attachments/assets/3c6178b1-a4eb-4072-85d2-618614c5068a)
 
 - Migration Process :  connections create --> migration
@@ -55,7 +59,7 @@ For AWS RDS database,
   - migrate the data from aws to heatwave   
     ![image](https://github.com/user-attachments/assets/1c0a2a85-bce2-48a2-8e8b-69f44643d434)   
     
-#### 2. MySQL SHELL (Dump/Load util)
+#### 2. MySQL SHELL (Dump/Load util) 사용
 
 ![image](https://github.com/user-attachments/assets/fec90a84-f106-4cbb-baf9-7a3ac47c52db)
 
