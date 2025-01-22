@@ -31,8 +31,12 @@ Heatwave에서 사용할 수 있는 MySQL 리소스 타입
   ```bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"```
 
 ### 3. 이관 방안 (Migration Method)
+
+
 #### 1. OCI DMS (Database Migration service)툴 사용
 ![image](https://github.com/user-attachments/assets/3c6178b1-a4eb-4072-85d2-618614c5068a)
+
+(참고 페이지 : https://blogs.oracle.com/dataintegration/post/migrate-aws-rds-for-mysql-to-heatwave-mysql-using-oci-database-migration)
 
 - Migration Process :  connections create --> migration
 
