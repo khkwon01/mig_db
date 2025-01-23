@@ -15,6 +15,11 @@ For AWS RDS database,
 - setup binlog_row_image to FULL
 - setup binlog_row_metadata to FULL
 
+For Source MySQL database,
+- check primary key for all tables
+- check innodb engine for all tables
+- check characterset and collation  (동일 한지 확인, ex utf8mb4)
+
 Heatwave에서 사용할 수 있는 MySQL 리소스 타입
 - https://docs.oracle.com/en-us/iaas/mysql-database/doc/supported-shapes.html
 
