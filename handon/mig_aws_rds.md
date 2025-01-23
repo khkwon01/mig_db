@@ -4,7 +4,9 @@
 ### 1. 선결조건 (Prerequesites)    
 For network between AWS and OCI,   
 - use VPN or use Dedicated network (ex,Direct conenct)
+  
 or
+
 - use public ip of RDS
 
 For AWS RDS database,
