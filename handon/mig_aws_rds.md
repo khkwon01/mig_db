@@ -23,11 +23,8 @@ For Source MySQL database,
 Heatwave에서 사용할 수 있는 MySQL 리소스 타입
 - https://docs.oracle.com/en-us/iaas/mysql-database/doc/supported-shapes.html
 
-이관전 사전 호환성 체크 (database 버전 변경시)
+이관전 사전 호환성 체크 (database 버전 변경시, 변경되는 버전에 맞는 shell 설치 필요)
 - mysql shell에 util.checkForServerUpgrade() 사용하여 확인 (source에서 수행)
-
-![image](https://github.com/user-attachments/assets/cc747338-438f-4f5a-8ba8-179d9f922fc0)
-
 
 
 ### 2. MySQL Shell 설치 및 구성 (Amazon linux setup using MySQL shell)
