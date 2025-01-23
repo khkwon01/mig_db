@@ -5,7 +5,7 @@
 For network between AWS and OCI,   
 - use VPN or use Dedicated network (ex,Direct conenct)
   
-or
+  or
 
 - use public ip of RDS
 
