@@ -231,3 +231,6 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
 - 테이블 performance_schema.replication_connection_status (IO_thread가 실행 중이 아닐 때, connection에 문제가 있을 경우)
 - performance_schema.replication_applier_status_by_coordinator 및 performance_schema.replication_applier_status_by_worker 테이블에서 (SQL_thread가 실행 중이 아닐 때, 데이터 반영 안될 경우)
 - MySQL의 오류 로그 파일은 performance_schema.error_log 테이블에서도 사용 가능 (특히 MySQL HeatWave Database Service에서 클라우드에서 유용함)
+
+
+참고자료 : https://blogs.oracle.com/mysql/post/mysql-heatwave-database-service-inbound-replication-channel-troubleshooting-guide
