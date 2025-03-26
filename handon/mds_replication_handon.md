@@ -216,3 +216,10 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
     call sys.set_gtid_purged("+165bb3ee-3585-11ee-901d-02001701d33a:5-6")     
 
 ### C. channel 재연결 (resume)
+
+
+## 4) channel(replication) 상태 확인
+- SHOW REPLICA STATUS\G 의 출력 ​​(가장 일반적으로 사용되지만 가장 권장되지는 않음)
+- 테이블 performance_schema.replication_connection_status (IO_thread가 실행 중이 아닐 때, connection에 문제가 있을 경우)
+- performance_schema.replication_applier_status_by_coordinator 및 performance_schema.replication_applier_status_by_worker 테이블에서 (SQL_thread가 실행 중이 아닐 때, 데이터 반영 안될 경우)
+- MySQL의 오류 로그 파일은 performance_schema.error_log 테이블에서도 사용 가능 (특히 MySQL HeatWave Database Service에서 클라우드에서 유용함)
