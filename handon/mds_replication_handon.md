@@ -222,6 +222,7 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
    Begin; commit;
    ...
    set gtid_next=AUTOMATIC
+  ```
 
 ### C. channel 재연결 (resume)
 
