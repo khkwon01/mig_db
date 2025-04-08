@@ -214,7 +214,7 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
   ```
 
 ### B. 타켓 DB에서  admin 계정으로 아래 명령어 수행    
-- 위에 소스 DB에서 copy한 gtid를 넣어주고 아래 명령어 수행 (target에서 executed가 4까지 되었을 경우)
+- 위에 소스 DB에서 copy한 gtid를 넣어주고 아래 명령어 수행 (target에서 executed가 4까지 되었을 경우)    
   call sys.set_gtid_purged("+165bb3ee-3585-11ee-901d-02001701d33a:5-6")     
 
 - or
