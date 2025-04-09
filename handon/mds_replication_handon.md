@@ -184,6 +184,7 @@ Source와 Target db간 db 이름만 다르고 데이터는 동일해야 함
     SHOW ENGINE INNODB STATUS;
     SHOW MASTER STATUS;
     SHOW MASTER LOGS;
+    SHOW BINARY LOG STATUS\G;
     SELECT * FROM performance_schema.error_log;
     ```
 ### B. target (db접속)
